@@ -6,130 +6,137 @@ import Link from 'next/link'
 import { ShieldCheck, Truck, Headphones, Star } from 'lucide-react'
 
 const ProductsSection = () => {
-  const [activeTab, setActiveTab] = useState('Verified BM')
+  const [activeTab, setActiveTab] = useState('BM Services')
 
   const products = {
-    'Verified BM': [
+    'BM Services': [
       {
         id: 1,
-        name: 'Verified Business Manager',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/bm.png',
-        description: 'Verified Business Manager account ready for Facebook Ads',
-        price: '450',
-        oldPrice: '650',
-        save: '200.00',
-        popular: true
+        name: 'Buy Verified BM 1 | Verified Facebook Business Manager 1 For Static Ads',
+        image: '/images/card1.jpeg',
+        description: 'Verified Facebook Business Manager 1 For Static Ads',
+        price: '49.00',
+        oldPrice: '',
+        save: '',
+        popular: false
       },
       {
         id: 2,
-        name: 'Aged BM Account',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/aged-bm.png',
-        description: 'Aged Business Manager with proven history',
-        price: '550',
-        oldPrice: '750',
-        save: '200.00',
+        name: 'BM Verification Service: Verify Facebook Business Manager',
+        image: '/images/card2.jpeg',
+        description: 'Verify Facebook Business Manager',
+        price: '49.00',
+        oldPrice: '119.00',
+        save: '70.00',
         popular: false
       },
       {
         id: 3,
-        name: 'Premium BM Package',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/premium-bm.png',
-        description: 'Premium Business Manager with all features',
-        price: '850',
-        oldPrice: '1050',
-        save: '200.00',
+        name: 'Buy Verified BM with Verified Ads Account',
+        image: '/images/card3.jpeg',
+        description: 'Buy Verified BM with Verified Ads Account',
+        price: '99.00',
+        oldPrice: '',
+        save: '',
         popular: false
-      }
-    ],
-    'WhatsApp Business API': [
+      },
       {
         id: 4,
-        name: 'WhatsApp Business API',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/whatsapp-api.png',
-        description: 'Official WhatsApp Business API account',
-        price: '299',
-        oldPrice: '499',
-        save: '200.00',
+        name: 'Buy Verified BM 3 | Verified Facebook Business Manager 3',
+        image: '/images/card5.jpeg',
+        description: 'Verified Facebook Business Manager 3',
+        price: '99.00',
+        oldPrice: '139.00',
+        save: '40.00',
         popular: true
       },
       {
         id: 5,
-        name: 'WhatsApp Green Tick',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/whatsapp-green.png',
-        description: 'Verified WhatsApp account with green tick',
-        price: '399',
-        oldPrice: '599',
-        save: '200.00',
+        name: 'Buy Verified BM 5 | Verified Facebook Business Manager',
+        image: '/images/card6.jpeg',
+        description: 'Verified Facebook Business Manager',
+        price: '299.00',
+        oldPrice: '',
+        save: '',
+        popular: false
+      },
+       {
+        id: 6,
+        name: 'Buy Verified BM 10 | Real Documents Verified Facebook Business Manager',
+        image: '/images/card7.jpeg',
+        description: 'Real Documents Verified Facebook Business Manager',
+        price: '300.00',
+        oldPrice: '',
+        save: '',
         popular: false
       }
     ],
-    'Facebook Ads': [
+    'WhatsApp API (WABA)': [
       {
-        id: 6,
-        name: 'Facebook Ad Account',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/fb-ads.png',
-        description: 'Ready-to-use Facebook Ads account',
-        price: '150',
-        oldPrice: '350',
-        save: '200.00',
+        id: 7,
+        name: 'Buy Whatsapp Business API limit 2000 With FB Verified BM',
+        image: '/images/card8.jpeg',
+        description: 'Buy Whatsapp Business API limit 2000 With FB Verified BM',
+        price: '199.00',
+        oldPrice: '',
+        save: '',
+        popular: false
+      },
+      {
+        id: 8,
+        name: 'Buy WhatsApp Business API limit 250 With FB Verified BM',
+        image: '/images/card9.jpeg',
+        description: 'Buy WhatsApp Business API limit 250 With FB Verified BM',
+        price: '70.00',
+        oldPrice: '80.00',
+        save: '10.00',
         popular: true
       },
       {
-        id: 7,
-        name: 'Unlimited Ad Account',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/unlimited-ads.png',
-        description: 'Unlimited spending limit ad account',
-        price: '350',
-        oldPrice: '550',
-        save: '200.00',
-        popular: false
-      }
-    ],
-    'TikTok Ads': [
-      {
-        id: 8,
-        name: 'TikTok Ad Account',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/tiktok-ads.png',
-        description: 'TikTok Ads account ready for campaigns',
-        price: '200',
-        oldPrice: '400',
-        save: '200.00',
-        popular: true
-      }
-    ],
-    'Google Ads': [
-      {
         id: 9,
-        name: 'Google Ads Account',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/google-ads.png',
-        description: 'Google Ads account with credit',
-        price: '250',
-        oldPrice: '450',
-        save: '200.00',
+        name: 'Buy WhatsApp Business API Limit 10000 With FB Verified BM - Verified Meta Business Messaging',
+        image: '/images/card1.jpeg',
+        description: 'Verified Meta Business Messaging',
+        price: '900.00',
+        oldPrice: '',
+        save: '',
         popular: false
       }
     ],
-    'Aged Accounts': [
-      {
+    'Social Accounts': [
+       {
         id: 10,
-        name: 'Aged Facebook Profile',
-        image: 'https://yxifzzvsoqzsdkeibvgg.supabase.co/storage/v1/object/public/products/aged-profile.png',
-        description: 'Aged Facebook profile with history',
-        price: '100',
-        oldPrice: '300',
-        save: '200.00',
+        name: 'Reinstate Facebook Account | Business Use, Personal, or Running ads',
+        image: '/images/card2.jpeg',
+        description: 'Reinstate Facebook Account',
+        price: '149.00',
+        oldPrice: '',
+        save: '',
+        popular: false
+      },
+      {
+        id: 11,
+        name: 'Verified TikTok agency ad account buy- Verified & High Limit TikTok Ads account for Agencies',
+        image: '/images/card3.jpeg',
+        description: 'Verified & High Limit TikTok Ads account for Agencies',
+        price: '99.00',
+        oldPrice: '',
+        save: '',
         popular: false
       }
-    ]
+    ],
+    'Meta Tools': [],
+    'Meta Verified BM': [],
+    'Facebook Ads Account': []
   }
 
   const tabs = [
-    'Verified BM',
-    'WhatsApp Business API',
-    'Facebook Ads',
-    'TikTok Ads',
-    'Google Ads',
-    'Aged Accounts'
+    'BM Services',
+    'Meta Tools', 
+    'Meta Verified BM',
+    'WhatsApp API (WABA)',
+    'Facebook Ads Account',
+    'Social Accounts'
   ]
 
   return (

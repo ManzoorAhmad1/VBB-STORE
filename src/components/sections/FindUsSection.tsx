@@ -1,32 +1,32 @@
 "use client"
 
-import { Globe, MessageCircle, Send, Mail } from 'lucide-react'
+import { MapPin, MessageCircle, Clock, Mail } from 'lucide-react'
 
 const FindUsSection = () => {
   const contacts = [
     {
-      icon: <Globe className="h-6 w-6 text-white" />,
-      title: 'Online Store',
-      description: 'vbbstore.com – Shop 24/7 from anywhere in the world',
-      link: 'https://vbbstore.com',
+      icon: <MapPin className="h-6 w-6 text-white" />,
+      title: 'POSTAL ADDRESS',
+      description: 'Madarganj, Pirganj, Rangpur, Bangladesh - 5470',
+      link: '#',
     },
     {
       icon: <MessageCircle className="h-6 w-6 text-white" />,
-      title: 'WhatsApp',
-      description: 'Chat with us anytime for instant support',
+      title: 'CONTACT ON WHATSAPP',
+      description: '+88 013 0266 9333',
       link: 'https://wa.me/8801302669333',
     },
     {
-      icon: <Send className="h-6 w-6 text-white" />,
-      title: 'Telegram',
-      description: '@vbbstore – Message us on Telegram',
-      link: 'https://t.me/Verifiedbmbuy',
+      icon: <Clock className="h-6 w-6 text-white" />,
+      title: 'WORK HOURS',
+      description: 'Saturday - Friday 6:00 - 23:00',
+      link: '#',
     },
     {
       icon: <Mail className="h-6 w-6 text-white" />,
-      title: 'Email',
-      description: 'support@vbbstore.com',
-      link: 'mailto:support@vbbstore.com',
+      title: 'EMAIL ADDRESS',
+      description: 'info@verifiedbmbuy.com',
+      link: 'mailto:info@verifiedbmbuy.com',
     }
   ]
 
@@ -35,33 +35,30 @@ const FindUsSection = () => {
       <div className="container">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-[#1877F2]">
-            FIND US
+            OUR LOCATION
           </span>
           <h2 className="mb-4 text-4xl font-extrabold text-[#0D1625] sm:text-5xl">
-            How to Find Our Location
+            How to find our <span className="text-[#1877F2]">Verified BM BUY</span> Store
           </h2>
-          <p className="text-lg text-slate-500">
-            VBB STORE operates as a global digital business. Reach us through any of the channels below — we're available 24/7.
-          </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {contacts.map((contact, index) => (
             <a 
               key={index}
               href={contact.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-blue-100 hover:shadow-md"
+              target={contact.link !== '#' ? "_blank" : undefined}
+              rel={contact.link !== '#' ? "noopener noreferrer" : undefined}
+              className="group flex flex-col items-center text-center gap-4 rounded-2xl border border-transparent bg-white p-6 transition-all hover:border-slate-100 hover:shadow-lg"
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#1877F2] shadow-sm group-hover:bg-blue-700 transition-colors">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-green-500 shadow-sm group-hover:bg-green-600 transition-colors">
                 {contact.icon}
               </div>
               <div>
-                <h3 className="mb-1 text-lg font-bold text-[#0D1625]">
+                <h3 className="mb-1 text-sm font-bold text-[#0D1625] uppercase tracking-wide">
                   {contact.title}
                 </h3>
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-slate-500 font-medium">
                   {contact.description}
                 </p>
               </div>

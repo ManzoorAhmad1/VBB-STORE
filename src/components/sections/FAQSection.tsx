@@ -8,87 +8,63 @@ const FAQSection = () => {
 
   const leftFaqs = [
     {
-      question: 'What exactly is a Verified Business Manager?',
-      answer: 'A Verified Business Manager (BM) is a Facebook ad account that has officially passed Meta\'s business verification process. This gives you higher spending limits, better trust scores, and less chance of getting banned compared to regular accounts.'
-    },
-    {
-      question: 'How does the verification work?',
-      answer: 'We use legitimate business documents (LLC, LTD, etc.) to verify the Business Manager with Meta. Once verified, the green "Verified" badge appears in the Security Center, confirming its authenticity.'
-    },
-    {
-      question: "What's the WhatsApp Business API?",
-      answer: 'The WhatsApp Business API is an enterprise solution allowed by Meta for businesses to send bulk messages, use chatbots, and have multiple agents. Our API accounts come pre-verified and ready for high-volume messaging.'
-    },
-    {
-      question: 'How fast will I get my account?',
-      answer: 'Instantly! Or within 10-30 minutes maximum during business hours. Once your payment is confirmed, our automated system or support team delivers the credentials to your email or WhatsApp immediately.'
+      question: 'What is Verified BM Buy Store?',
+      answer: 'Verified BM Buy Store is a trusted online platform offering high-quality products with secure transactions and fast shipping.'
     },
     {
       question: 'What payment methods do you accept?',
       answer: 'We accept USDT (Tether), Bitcoin, and other major cryptocurrencies for maximum privacy and speed. We also accept bank transfers for bulk orders.'
     },
     {
-      question: 'What if my account stops working?',
-      answer: 'We offer a 7-day replacement guarantee. If your account gets restricted or disabled due to no fault of your own within the warranty period, we will replace it for free instantly.'
+      question: 'What types of Business Managers do you offer?',
+      answer: 'We offer Verified Business Managers, WhatsApp Business API accounts, Facebook Ads accounts, Reinstated Profiles, and Agency Ad Accounts (TikTok, Google, etc.).'
     },
     {
-      question: 'Can I use a verified BM for any niche?',
-      answer: 'Yes, verified BMs work for all compliant niches including E-commerce, Dropshipping, Lead Gen, and Affiliate Marketing. They are stronger and last longer than regular accounts.'
+      question: 'Are these Business Managers safe to use?',
+      answer: 'Yes, they are safe. We provide a complete login guide using anti-detect browsers to ensure safety and prevent suspicious activity flags.'
     },
     {
-      question: 'How many ad accounts can I run?',
-      answer: 'Verified BMs typically start with a limit of 5-10 ad accounts, but this can increase up to 2500+ as you spend more. Unverified BMs are usually stuck with just 1 ad account.'
+      question: 'How do I purchase a Business Manager?',
+      answer: "Simply choose the package you need, click 'Buy Now' or contact us on WhatsApp/Telegram. Once payment is confirmed, we deliver the credentials."
     },
     {
-      question: 'Is buying a verified BM safe?',
-      answer: 'Yes, it is safe as long as you follow our login guide. We provide a complete "How-To" guide on how to log in safely using anti-detect browsers to prevent any suspicious activity flags.'
+      question: 'What are the benefits of a verified BM?',
+      answer: 'Benefits include higher trust scores, lower CPMs, faster ad approvals, ability to share pixels, and access to exclusive Meta features.'
     },
     {
-      question: 'Do you offer bulk pricing?',
-      answer: 'Absolutely. Many agencies buy from us in bulk (10+ accounts). Contact our support team on WhatsApp for special reseller rates.'
+      question: 'What is a "Verified BM"?',
+      answer: "It's a Business Manager account that has been officially verified by the platform (e.g., Meta) to confirm the business's identity and legitimacy."
     }
   ]
 
   const rightFaqs = [
     {
-      question: 'Do you sell TikTok and Google Ads accounts?',
-      answer: 'Yes, we provide agency ad accounts for TikTok, Google, and Snapchat. Information for these is available upon request or in the specific product section of our store.'
+      question: 'How long does it take to receive my BM after payment?',
+      answer: 'Instantly! Or within 10-30 minutes maximum during business hours. Once your payment is confirmed, our automated system or support team delivers the credentials.'
     },
     {
-      question: 'Can I get a reinstated Facebook profile?',
-      answer: 'Yes, we sell "Reinstated" (Green Check) profiles. These are profiles that were restricted and then officially restored by Meta, making them extremely strong for running ads.'
+      question: 'Can I get a replacement if my BM gets restricted?',
+      answer: 'Yes, we offer a 7-day replacement guarantee. If your account gets restricted or disabled due to no fault of your own within the warranty period, we will replace it for free.'
     },
     {
-      question: 'How do I reach support after buying?',
-      answer: 'We have a dedicated support team available on WhatsApp and Telegram. You will receive the direct support contact link along with your order delivery.'
+      question: 'Do you offer bulk discounts?',
+      answer: 'Absolutely. Many agencies buy from us in bulk. Contact our support team on WhatsApp for special reseller rates.'
     },
     {
-      question: 'What trust score do your BMs have?',
-      answer: 'Our Verified BMs have the highest possible trust score because they are verified with real corporate documents. This ensures better CPMs and ad delivery stability.'
+      question: 'Do you provide after-sales support?',
+      answer: 'Yes, we have a dedicated support team available 24/7 on WhatsApp and Telegram to help you with login, setup, and any issues.'
     },
     {
-      question: 'Can I start running ads immediately?',
-      answer: 'Yes. Once you log in and link your payment method, you can launch campaigns immediately. No need to "warm up" the BM for weeks like with unverified accounts.'
+      question: 'How can I contact customer support?',
+      answer: 'You can contact us via the WhatsApp button on our site, our Telegram handle @Verifiedbmbuy, or by email at info@verifiedbmbuy.com.'
     },
     {
-      question: 'Do your WhatsApp API accounts get the green badge?',
-      answer: 'Our accounts are "Green Tick Ready". We help you submit the application for the Green Badge (Verified Business), but final approval depends on Meta\'s press coverage requirements for your brand.'
+      question: 'Why should I get my BM verified?',
+      answer: 'Verifying your BM builds trust with Meta/Facebook, reduces ban risks, increases spending limits, and unlocks advanced tools like WhatsApp API.'
     },
     {
-      question: 'What happens if my account gets restricted?',
-      answer: 'If it happens within our warranty period, we replace it. If it happens later, we can help you appeal it. Our Verified BMs have a much higher success rate for appeals than regular ones.'
-    },
-    {
-      question: 'Can I use the account from any country?',
-      answer: 'Yes, our accounts are global. You can log in from any country. However, we recommend using a high-quality proxy matching the account region for the first login for extra safety.'
-    },
-    {
-      question: 'Do accounts come with documentation?',
-      answer: 'Yes, every Verified BM comes with the documents used for verification. This is crucial if you ever need to re-verify the identity with Meta in the future.'
-    },
-    {
-      question: 'How long have you been doing this?',
-      answer: 'We have been in the ad account business for over 5 years, serving thousands of media buyers, agencies, and e-commerce store owners worldwide.'
+      question: 'How do I become a verified BM?',
+      answer: 'Becoming verified requires submitting legal business documents to Meta. If you buy from us, the verification is already done for you.'
     }
   ]
 

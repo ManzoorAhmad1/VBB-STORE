@@ -6,48 +6,45 @@ const WhatsAppBenefitsSection = () => {
   const benefits = [
     {
       icon: <MessageSquare className="h-6 w-6 text-white" />,
-      title: 'Bulk Messaging',
-      description: 'Send thousands of messages, order updates, and promos — all from one dashboard.'
-    },
-    {
-      icon: <Bot className="h-6 w-6 text-white" />,
-      title: 'Chatbot Ready',
-      description: 'Hook up AI chatbots to handle customer questions while you sleep.'
+      title: 'Direct Customer Engagement',
+      description: "The WhatsApp Business API connects you with customers instantly. It's the top messaging app, so your message gets through fast. There are no delays or spam filters to block communication."
     },
     {
       icon: <BarChart2 className="h-6 w-6 text-white" />,
-      title: 'Track Everything',
-      description: 'See who opened your messages, who replied, and how your campaigns perform.'
+      title: 'Higher Open & Response Rates',
+      description: 'WhatsApp messages are powerful. They have a 98% open rate, which is much higher than email or SMS. This means customers are more likely to see your messages. Better visibility leads to better engagement and conversion.'
     },
     {
       icon: <Lock className="h-6 w-6 text-white" />,
-      title: 'Fully Encrypted',
-      description: "WhatsApp's end-to-end encryption keeps every business conversation private."
+      title: 'Verified & Secure Communication',
+      description: "Using an official Meta-approved channel keeps your communications safe. It builds trust with your customers. Verified messaging also enhances your business's professionalism."
+    },
+    {
+      icon: <Bot className="h-6 w-6 text-white" />,
+      title: 'Automate Business Messaging',
+      description: 'Set up auto-replies and reminders. Engage with customers around the clock. This tool helps you never miss a chance to connect. Enhance customer satisfaction by providing timely responses and always keeping them informed.'
     },
     {
       icon: <Smartphone className="h-6 w-6 text-white" />,
-      title: 'Use Multiple Devices',
-      description: 'Your whole team can manage conversations from different devices at the same time.'
+      title: 'Share Multimedia & Documents',
+      description: 'You can send different types of media in one message. Include images, videos, documents, and payment links. This helps share all the information clearly and speeds up customer decisions.'
     },
     {
       icon: <Globe className="h-6 w-6 text-white" />,
-      title: 'Reach 2B+ Users',
-      description: 'WhatsApp is used in 180+ countries. Your customers are already there.'
+      title: 'Global Reach, Local Feel',
+      description: 'Connect with customers around the globe. WhatsApp helps you reach them in their own language, making interactions more personal and easier to build trust and loyalty.'
     }
   ]
 
   return (
     <section className="py-20 bg-white">
       <div className="container">
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-[#1877F2]">
-            WHATSAPP API
-          </span>
-          <h2 className="mb-4 text-4xl font-extrabold text-[#0D1625] sm:text-5xl">
-            Why Businesses Need WhatsApp API
+        <div className="mx-auto mb-16 max-w-4xl text-center">
+          <h2 className="mb-4 text-3xl font-extrabold text-[#0D1625] sm:text-4xl md:text-5xl">
+            Importance of WhatsApp Business API. Why Your Business Needs It.
           </h2>
           <p className="text-lg text-slate-500">
-            Your customers are on WhatsApp. Meet them where they already are.
+            The WhatsApp Business API helps your business connect with customers easily. It secures communication and scales with your needs. With this tool, you can boost customer relationships. It also improves conversion rates. Direct and real-time chat are key for today's businesses. It supports 1,000+ unlimited messages daily. All chats are secure and encrypted.
           </p>
         </div>
 

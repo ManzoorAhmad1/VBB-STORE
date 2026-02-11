@@ -1,85 +1,79 @@
 "use client"
 
-import { ShieldCheck, MessageSquare, BarChart3, UserCheck, Sparkles, Package, Settings, Users } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <ShieldCheck className="h-6 w-6 text-white" />,
-      title: 'Verified Business Managers',
-      description: 'BMs with real documentation and top trust scores — ready for serious advertising.'
+      title: 'Verified Facebook Business Manager Accounts',
+      description: 'Get verified Business Manager accounts from Meta, ensuring your safety with real documentation and a 100% safety guarantee.'
     },
     {
-      icon: <MessageSquare className="h-6 w-6 text-white" />,
-      title: 'WhatsApp Business API',
-      description: 'Enterprise WABA accounts set up for chatbots, bulk messaging, and customer support.'
-    },
-    {
-      icon: <BarChart3 className="h-6 w-6 text-white" />,
-      title: 'Facebook Ads Accounts',
-      description: 'Ad accounts with different spending limits so you can start running campaigns right away.'
-    },
-    {
-      icon: <UserCheck className="h-6 w-6 text-white" />,
       title: 'Reinstated Profiles',
-      description: 'Recovered Facebook profiles with clean records and full functionality.'
+      description: 'We can easily recover your restricted or disabled accounts. Our reinstated profiles are fully verified.'
     },
     {
-      icon: <Sparkles className="h-6 w-6 text-white" />,
-      title: 'TikTok & Google Ads',
-      description: 'Ready-to-use ad accounts for TikTok and Google. Start running campaigns on day one.'
+      title: 'WhatsApp API',
+      description: 'Connect with customers worldwide using WhatsApp Cloud API. Enjoy automated messages and high deliverability. Communication is secure and Meta-approved.'
     },
     {
-      icon: <Package className="h-6 w-6 text-white" />,
-      title: 'Bulk Orders',
-      description: 'Need 10, 50, or 100 accounts? We offer volume pricing for agencies and resellers.'
+      title: 'Dailon BM',
+      description: 'Maximize your marketing with Dailon BM. Simplify your campaigns. Improve targeting. Cut down on ad rejections.'
     },
     {
-      icon: <Settings className="h-6 w-6 text-white" />,
-      title: 'Custom Setups',
-      description: "We'll configure accounts to match your exact requirements — just tell us what you need."
-    },
-    {
-      icon: <Users className="h-6 w-6 text-white" />,
-      title: 'Dedicated Account Manager',
-      description: 'Big orders get a personal point of contact for smooth onboarding and ongoing support.'
+      title: 'Facebook Ads Account For Advertising',
+      description: "Start advertising now with verified Facebook Ads accounts. They're safe and trusted, making them perfect for quick campaign scaling. Get ready for immediate deployment!"
     }
   ]
 
   return (
-    <section id="services" className="py-20 bg-[#F8F9FB]">
+    <section id="services" className="py-20 bg-[#F8F9FB] overflow-hidden">
       <div className="container">
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-[#1877F2]">
-            OUR SERVICES
-          </span>
-          <h2 className="mb-4 text-4xl font-extrabold text-[#0D1625] sm:text-5xl">
-            What We Offer
-          </h2>
-          <p className="text-lg text-slate-500">
-            Everything you need to run Meta ads at scale — all from one place.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-lg ${
-                index === 0 ? 'border-blue-100 shadow-md ring-1 ring-blue-50' : ''
-              }`}
-            >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#1877F2] shadow-sm group-hover:bg-blue-700 transition-colors">
-                {service.icon}
-              </div>
-              <h3 className="mb-3 text-lg font-bold text-[#0D1625]">
-                {service.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-slate-500">
-                {service.description}
-              </p>
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          
+          <div className="relative animate-fade-up">
+            <span className="mb-4 block text-sm font-bold uppercase tracking-wider text-[#1877F2]">
+              Verified Accounts
+            </span>
+            <h2 className="mb-6 text-4xl font-extrabold text-[#0D1625] sm:text-5xl leading-tight">
+              What Service "Verified BM Buy" Is Offering.
+            </h2>
+            <p className="mb-6 text-lg text-slate-500 leading-relaxed">
+              Based your success with a <strong>Verified Business Manager</strong> and <strong>WhatsApp API</strong>. Get a <strong>reinstated profile</strong> and <strong>Facebook Ads account</strong>. Use basic tools to take control of your ads. Launch powerful campaigns without limits. Don't miss out on improving your advertising strategy!
+            </p>
+            <p className="mb-8 text-lg text-slate-500 leading-relaxed">
+              At Verified BM Buy, we prioritize trust and security. Our services are not just reliable; they are a guarantee. We are unwavering in our commitment to these values, ensuring you can rely on us for your business needs.
+            </p>
+            
+            <div className="flex flex-wrap gap-4">
+              <button className="h-12 rounded-xl bg-[#1877F2] px-8 text-base font-bold text-white shadow-lg shadow-blue-200 transition-all hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1">
+                VIEW META TOOLS
+              </button>
+              <a href="https://wa.me/8801302669333" target="_blank" rel="noopener noreferrer">
+                <button className="h-12 rounded-xl border-2 border-[#1877F2] bg-transparent px-8 text-base font-bold text-[#1877F2] transition-all hover:bg-blue-50">
+                  WHATSAPP NOW
+                </button>
+              </a>
             </div>
-          ))}
+          </div>
+
+          <div className="relative space-y-8 animate-fade-left">
+             <div className="absolute -inset-4 rounded-3xl bg-white/50 backdrop-blur-sm -z-10 border border-slate-100/50 shadow-2xl"></div>
+             {services.map((service, index) => (
+              <div key={index} className="flex gap-4">
+                <div className="flex-shrink-0 mt-1">
+                  <CheckCircle2 className="h-6 w-6 text-[#1877F2] fill-blue-50" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-[#0D1625] mb-2">{service.title}</h3>
+                  <p className="text-slate-500 leading-relaxed text-sm">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>

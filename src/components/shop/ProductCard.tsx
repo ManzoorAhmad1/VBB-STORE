@@ -13,7 +13,12 @@ const ProductCard = ({ product }: any) => {
             className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-xl hover:border-blue-100"
         >
             <div className="relative overflow-hidden bg-gray-50 aspect-[4/3]">
-                {product.popular && (
+                {product.soldOut && (
+                    <div className="absolute right-0 top-0 z-20 bg-red-600 px-4 py-1 text-xs font-bold text-white shadow-md">
+                        SOLD OUT
+                    </div>
+                )}
+                {product.popular && !product.soldOut && (
                     <div className="absolute right-0 top-6 z-10 translate-x-1/3 rotate-45 transform bg-blue-600 px-8 py-1 text-xs font-bold text-white shadow-md">
                         Premium
                     </div>
@@ -39,7 +44,7 @@ const ProductCard = ({ product }: any) => {
                 <div className="space-y-1">
                     <span className="text-[11px] font-bold text-blue-600 uppercase tracking-wider">Verified BM</span>
                     <h3 className="text-[17px] font-bold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors">
-                        {product.name}
+                        {product.title}
                     </h3>
                 </div>
 
@@ -59,44 +64,29 @@ const ProductCard = ({ product }: any) => {
                 <div className="mt-auto pt-2">
                     <div className="rounded-xl bg-[#FFF5F5] border border-[#FFE0E0] p-4 mb-4">
                         <div className="flex items-center gap-2 mb-1">
-                            <span className="text-gray-500 line-through text-xs font-bold">${product.oldPrice || '600'}</span>
-                            <span className="text-green-600 text-xs font-bold">Save ${product.save || '200.00'}</span>
+                            {product.oldPrice && (
+                                <span className="text-gray-500 line-through text-xs font-bold">${product.oldPrice}</span>
+                            )}
+                            {product.save && (
+                                <span className="text-green-600 text-xs font-bold">Save ${product.save}</span>
+                            )}
                         </div>
                         <div className="flex items-baseline gap-1">
-                            <span className="text-3xl font-extrabold text-[#111827]">${product.price}</span>
-                            <span className="text-gray-500 text-xs font-bold">USD</span>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-3 mb-4">
-                        <div className="flex flex-col items-center justify-center p-2.5 bg-gray-50 rounded-xl border border-gray-100">
-                            <ShieldCheck className="w-5 h-5 text-[#1877F2] mb-1.5" />
-                            <span className="text-[10px] font-bold text-gray-700 text-center leading-tight">100%<br />Safe</span>
-                        </div>
-                        <div className="flex flex-col items-center justify-center p-2.5 bg-gray-50 rounded-xl border border-gray-100">
-                            <Truck className="w-5 h-5 text-[#1877F2] mb-1.5" />
-                            <span className="text-[10px] font-bold text-gray-700 text-center leading-tight">Instant</span>
-                        </div>
-                        <div className="flex flex-col items-center justify-center p-2.5 bg-gray-50 rounded-xl border border-gray-100">
-                            <Headphones className="w-5 h-5 text-[#1877F2] mb-1.5" />
-                            <span className="text-[10px] font-bold text-gray-700 text-center leading-tight">24/7</span>
+                            <span className="text-3xl font-extrabold text-[#111827]">
+                                {typeof product.price === 'number' ? `$${product.price}` : product.price}
+                            </span>
                         </div>
                     </div>
 
                     <div className="flex flex-col gap-2.5">
-                        <button className="w-full flex items-center justify-center gap-2 rounded-lg bg-[#198754] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#157347]">
+                        <Link href={product.whatsappLink || '#'} target="_blank" className="w-full flex items-center justify-center gap-2 rounded-full bg-[#00acec] px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-[#009bd4] uppercase tracking-wide">
                             <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                <path d="M8 5v14l11-7z" />
                             </svg>
-                            Buy on WhatsApp
-                        </button>
-
-                        <button className="w-full flex items-center justify-center gap-2 rounded-lg bg-[#0D6EFD] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#0b5ed7]">
-                            <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
-                            </svg>
-                            Buy on Telegram
-                        </button>
+                            CONTACT US
+                        </Link>
+                    </div>
+                </div>
 
                         <Link href={`/checkout/${product.id}`} className="w-full">
                             <button className="w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-bold text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 border-b-2 hover:border-b-gray-300">

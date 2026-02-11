@@ -19,7 +19,7 @@ const HeroSection = () => {
                             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/20 via-primary/5 to-transparent blur-2xl"></div>
                             <div className="relative rounded-3xl p-[3px] shadow-2xl shadow-primary/20">
                                 <Image
-                                    src="/assets/herosectionImage.png"
+                                    src="/images/herosection image.jpeg"
                                     alt="VBB - Verified BM Buy"
                                     className="h-52 w-52 rounded-[22px] object-cover sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-80 lg:w-80 animate-hero-scale-in"
                                     priority
@@ -42,16 +42,12 @@ const HeroSection = () => {
                         </div>
 
                         <h1 className="mb-5 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl md:text-[2.75rem] lg:text-[2.85rem] xl:text-[3.25rem] animate-hero-fade-right" style={{ animationDelay: '0.25s' }}>
-                            Buy <span className="text-vbb-primary">Verified BM</span> And<br />
-                            <span className="mt-3 block text-green-500">WhatsApp Business API</span>
+                            Buy <span className="text-vbb-primary">Verified BM</span> – Facebook Business Manager <br />
+                            <span className="mt-3 block text-green-500">& WhatsApp API Accounts</span>
                         </h1>
 
                         <p className="mb-4 text-sm text-muted-foreground md:text-base leading-relaxed text-justify animate-hero-fade-right" style={{ animationDelay: '0.35s' }}>
-                            We sell verified Facebook Business Managers and WhatsApp Business API accounts — the real deal, with proper documentation. Need Facebook Ads, TikTok Ads, Google Ads accounts, or reinstated profiles? We&apos;ve got those too. Every account is legit, secure, and ready to use. Over 10,000 advertisers trust us because we deliver what we promise, fast.
-                        </p>
-
-                        <p className="mb-8 text-sm text-muted-foreground md:text-base leading-relaxed text-justify animate-hero-fade-right" style={{ animationDelay: '0.35s' }}>
-                            Whether you&apos;re an agency juggling dozens of clients or a solo media buyer pushing for better ROI, a verified BM removes the ceiling on your growth.
+                            Verified BM Buy is a trusted and secure platform for purchasing <strong>verified Facebook Business Manager accounts</strong> [Meta BM] and <strong>WhatsApp Business API [WABA]</strong> accounts. We also offer <strong>Facebook Ads accounts</strong>, reinstated profiles, and exclusive access to <strong>Dailon BM</strong> and other advanced <strong>Meta tools</strong>. All our accounts come with genuine documentation, ensuring authenticity, security, and dependability for advertisers and businesses worldwide. We provide you with a reliable solution you can trust.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-3 lg:gap-4 w-full animate-hero-fade-right" style={{ animationDelay: '0.45s' }}>

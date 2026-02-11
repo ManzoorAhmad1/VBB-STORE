@@ -23,138 +23,127 @@ const ShopPage = () => {
   const products = [
     {
       id: 1,
-      badge: '14% Off',
-      badgeType: 'discount',
-      image: '/images/products/bm-verification.png',
+      image: '/images/card1.jpeg',
       category: 'Verified BM',
-      title: 'Facebook Business Manager Verification Services: Verify Your Own Meta profitable',
-      description: 'Complete Business Manager Verification Process Included with real documentation. World over Trusty.',
+      title: 'BM Verification Service: Verify Facebook Business Manager',
+      description: 'Professional service to verify your Facebook Business Manager (BM) with real documentation. Fast and reliable.',
       rating: 5.0,
-      reviews: 17,
-      originalPrice: 64.99,
-      salePrice: 50,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      oldPrice: 99.00,
+      price: 49.00,
+      whatsappLink: 'https://wa.me/8801302669333'
     },
     {
       id: 2,
-      image: '/images/products/bm-agency.png',
+      image: '/images/card2.jpeg',
       category: 'Verified BM',
-      title: 'Verified BM - 1 Agency Pack (30 Ad Accounts)',
-      description: 'Fully verified Business Manager with 30 ad account slots. Massive capacity for large-scale advertising.',
+      title: 'Buy Ready Made Instagram Account – 2023| VERIFIED BM BUY-VBB',
+      description: 'Aged and verified Instagram accounts ready for immediate use. Perfect for brand building.',
       rating: 5.0,
-      reviews: 52,
-      salePrice: 1000,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      price: 10.00,
+      soldOut: true,
+      whatsappLink: 'https://wa.me/8801302669333'
     },
     {
       id: 3,
-      badge: '14% Off',
-      badgeType: 'discount',
-      image: '/images/products/bm-1-account.png',
-      category: 'Verified BM',
-      title: 'Verified BM - 1 Ad Account',
-      description: 'Fully verified Facebook Business Manager with 1 ad account slots. Massive capacity for large-scale advertising.',
+      image: '/images/card3.jpeg',
+      category: 'Reinstated Profiles',
+      title: 'Buy reinstate Facebook account | Business use, Personal, or Running ads.',
+      description: 'Restored Facebook profiles suitable for business use, personal activities, or running ads without restrictions.',
       rating: 5.0,
-      reviews: 27,
-      originalPrice: 24.99,
-      salePrice: 20,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      price: '39.00 - 65.00',
+      whatsappLink: 'https://wa.me/8801302669333'
     },
     {
       id: 4,
-      badge: 'Best Sale',
-      badgeType: 'bestsale',
-      image: '/images/products/bm-3-accounts.png',
+      image: '/images/4.jpeg',
       category: 'Verified BM',
-      title: 'Verified BM - 3 Ad Accounts',
-      description: 'Fully verified Facebook Business Manager with 3 ad account slots. Massive capacity for large-scale advertising.',
+      title: 'Buy Verified BM 10 | Real Documents Verified Facebook Business Manager',
+      description: 'High-tier Verified Business Manager (BM 10) verified with authentic documents for stable ad scaling.',
       rating: 5.0,
-      reviews: 23,
-      originalPrice: 499.99,
-      salePrice: 400,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      price: 300.00,
+      whatsappLink: 'https://wa.me/8801302669333'
     },
     {
       id: 5,
-      badge: '14% Off',
-      badgeType: 'discount',
-      image: '/images/products/whatsapp-250.png',
-      category: 'WhatsApp API',
-      title: 'WhatsApp Business API 250',
-      description: 'Ready-to-use WhatsApp Business API account with limit 250. Ideal for small and medium businesses.',
+      image: '/images/card5.jpeg',
+      category: 'Verified BM',
+      title: 'Buy Verified BM 3 | Verified Facebook Business Manager 3',
+      description: 'Verified Business Manager level 3. A reliable asset for managing your Facebook ad campaigns.',
       rating: 5.0,
-      reviews: 52,
-      originalPrice: 89.99,
-      salePrice: 70,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      oldPrice: 150.00,
+      price: 99.00,
+      whatsappLink: 'https://wa.me/8801302669333'
     },
     {
       id: 6,
-      badge: 'Best Sale',
-      badgeType: 'bestsale',
-      image: '/images/products/whatsapp-2000.png',
-      category: 'WhatsApp API',
-      title: 'WhatsApp cloud API 2000 Limit',
-      description: 'Enterprise WhatsApp Cloud API with 2000 daily message limit. Perfect for high-volume messaging.',
+      image: '/images/card6.jpeg',
+      category: 'Verified BM',
+      title: 'Buy Verified BM 5 | Verified Facebook Business Manager',
+      description: 'Premium Verified BM 5 account. Ideal for high-spend advertisers needing stability.',
       rating: 5.0,
-      reviews: 23,
-      salePrice: 199,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      price: 299.00,
+      whatsappLink: 'https://wa.me/8801302669333'
     },
     {
       id: 7,
-      badge: '14% Off',
-      badgeType: 'discount',
-      image: '/images/products/verified-ads.png',
-      category: 'Facebook Ads',
-      title: 'Verified Ads Account - with Verified BM',
-      description: 'Verified Facebook Ads account with $250 daily spending limit. Ready for immediate campaign launch.',
+      image: '/images/card7.jpeg',
+      category: 'Verified BM',
+      title: 'Buy Verified BM with Verified Ads Account',
+      description: 'Complete package: Verified BM + Verified Ads Account. Start advertising instantly without bans.',
       rating: 5.0,
-      reviews: 27,
-      originalPrice: 119.99,
-      salePrice: 100,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      price: 99.00,
+      whatsappLink: 'https://wa.me/8801302669333'
     },
     {
       id: 8,
-      image: '/images/products/bm-3-accounts-2.png',
-      category: 'Verified BM',
-      title: 'Verified BM - 3 Ad Account',
-      description: 'Perfect for agencies and marketers managing multiple campaigns with increased reach.',
+      image: '/images/card8.jpeg',
+      category: 'WhatsApp API',
+      title: 'Buy WhatsApp Business API Limit 10000 With FB Verified BM – Verified Meta Business Messaging',
+      description: 'Broadcast to 10k customers daily with this Verified WhatsApp Business API + BM bundle.',
       rating: 5.0,
-      reviews: 52,
-      originalPrice: 589.99,
-      salePrice: 99,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      price: 600.00,
+      whatsappLink: 'https://wa.me/8801302669333'
     },
     {
       id: 9,
-      image: '/images/products/reinstated-profile.png',
-      category: 'Reinstated Profiles',
-      title: 'Reinstated Facebook Profile',
-      description: 'Recovered Facebook profile with clean record and full functionality.',
+      image: '/images/card9.jpeg',
+      category: 'WhatsApp API',
+      title: 'Buy WhatsApp Business API limit 2000 With FB Verified BM',
+      description: 'Scale your messaging with 2000 daily limit WhatsApp Business API. Includes verified BM.',
       rating: 5.0,
-      reviews: 23,
-      salePrice: 50,
-      features: ['Instant Delivery', 'Verified Account', 'Unlimited Spend Cap'],
-      whatsappLink: 'https://wa.me/8801302669333',
-      telegramLink: 'https://t.me/Verifiedbmbuy'
+      price: 199.00,
+      whatsappLink: 'https://wa.me/8801302669333'
+    },
+    {
+      id: 10,
+      image: '/images/card1.jpeg',
+      category: 'WhatsApp API',
+      title: 'Buy WhatsApp Business API limit 250 With FB Verified BM',
+      description: 'Starter WhatsApp Business API package with 250 daily limit. Verified BM included.',
+      rating: 5.0,
+      oldPrice: 80.00,
+      price: 70.00,
+      whatsappLink: 'https://wa.me/8801302669333'
+    },
+    {
+      id: 11,
+      image: '/images/card2.jpeg',
+      category: 'TikTok Ads',
+      title: 'Verified TikTok agency ad account buy-Verified & High-Limit TikTok Ads Account for Agencies',
+      description: 'Agency-grade TikTok Ads account. High spending limits and verified status for serious marketers.',
+      rating: 5.0,
+      price: 99.00,
+      whatsappLink: 'https://wa.me/8801302669333'
+    },
+    {
+      id: 12,
+      image: '/images/card3.jpeg',
+      category: 'Verified BM',
+      title: 'Buy Verified BM 1 | Verified Facebook Business Manager 1 for Stable Ads',
+      description: 'Entry-level Verified BM 1. Stable foundation for your Facebook advertising campaigns.',
+      rating: 5.0,
+      price: 49.00,
+      whatsappLink: 'https://wa.me/8801302669333'
     }
   ]
 
@@ -173,14 +162,11 @@ const ShopPage = () => {
       <section className="bg-gradient-to-r from-[#1877F2] to-[#0D5CBD] py-16 text-white">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wider opacity-90">
-              Efficient & Safe
-            </p>
             <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl">
-              Our Products
+              Shop Verified BM buy-VBB
             </h1>
             <p className="mb-8 text-lg opacity-90">
-              Premium Verified Meta accounts, WhatsApp API access, and more. All with instant delivery & 7-day replacement guarantee
+              Buy ✅ Verified Business Manager (BM) Accounts, ✅WhatsApp Business API, ✅ Reinstate Profile, ✅ Facebook Ads Accounts (Fresh & Aged), and ✅ Other Meta Business Tools from shop Verified BM.
             </p>
             
             {/* Search Bar */}

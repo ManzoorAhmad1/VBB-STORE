@@ -5,22 +5,22 @@ import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: 'Sophie L.',
-      role: 'Agency Director • UK',
+      name: 'James Carter',
+      role: 'Digital Marketing Specialist',
+      initial: 'J',
+      text: "I purchased a verified Facebook Business Manager account, and the process was seamless. The support team was very responsive and helpful."
+    },
+    {
+      name: 'Sophia Williams',
+      role: 'Social Media Ad Manager',
       initial: 'S',
-      text: "Outstanding service! Got a verified BM and it exceeded my expectations. Support team is responsive 24/7. Best in the business."
+      text: "This is the most trusted source for verified Facebook Ads accounts. I have purchased several accounts, and they function seamlessly. Highly Recommended!"
     },
     {
-      name: 'Chen W.',
-      role: 'Growth Lead • Singapore',
-      initial: 'C',
-      text: "We've tried multiple providers before finding VBB STORE. The quality difference is night and day. Genuine verification, instant delivery, and zero issues."
-    },
-    {
-      name: 'Ahmed R.',
-      role: 'E-commerce Manager • Saudi Arabia',
-      initial: 'A',
-      text: "Bulk ordered 10 verified BMs for our clients. Every single one was perfect. The volume discount saved us thousands. Incredible value."
+      name: 'Michael Johnson',
+      role: 'E-commerce Business Owner',
+      initial: 'M',
+      text: "I needed a high-quality Business Manager and Ads account for my business and Verified BM Buy Store provided exactly what I needed. The setup process was easy, and the account is functioning perfectly!"
     }
   ]
 
@@ -29,13 +29,13 @@ const TestimonialsSection = () => {
       <div className="container">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-[#1877F2]">
-            TESTIMONIALS
+            Our Satisfied Clients' Reviews
           </span>
           <h2 className="mb-4 text-4xl font-extrabold text-[#0D1625] sm:text-5xl">
-            Customer Success Stories
+            Recent <span className="text-[#1877F2]">Reviews</span> from our customers
           </h2>
           <p className="text-lg text-slate-500">
-            Thousands of advertisers trust VBB STORE. Here's what they have to say.
+             
           </p>
         </div>
 

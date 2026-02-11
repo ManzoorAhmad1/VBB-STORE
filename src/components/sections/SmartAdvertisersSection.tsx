@@ -19,78 +19,45 @@ const SmartAdvertisersSection = () => {
   const benefits = [
     {
       icon: <ShieldCheck className="h-6 w-6 text-white" />,
-      title: 'Higher Trust Score',
-      description: 'Verified BMs are far less likely to get flagged or banned — Meta treats them differently.'
-    },
-    {
-      icon: <TrendingUp className="h-6 w-6 text-white" />,
-      title: 'Better Ad Results',
-      description: 'Higher trust means your ads get delivered more often, at lower costs. Your ROI goes up.'
-    },
-    {
-      icon: <Users className="h-6 w-6 text-white" />,
-      title: 'Run Multiple Ad Accounts',
-      description: 'One verified BM lets you manage several ad accounts — great for testing or running client campaigns.'
-    },
-    {
-      icon: <Target className="h-6 w-6 text-white" />,
-      title: 'Unlock Premium Tools',
-      description: "Get access to Meta features that aren't available to unverified accounts."
-    },
-    {
-      icon: <Globe className="h-6 w-6 text-white" />,
-      title: 'Advertise Anywhere',
-      description: 'No country restrictions. Run campaigns in any market you want.'
-    },
-    {
-      icon: <Zap className="h-6 w-6 text-white" />,
-      title: 'Faster Ad Approvals',
-      description: "Meta reviews your ads quicker when they know you're a verified business."
-    },
-    {
-      icon: <DollarSign className="h-6 w-6 text-white" />,
-      title: 'Higher Spend Limits',
-      description: 'Verified accounts can spend significantly more per day — no more hitting ceilings.'
-    },
-    {
-      icon: <Lock className="h-6 w-6 text-white" />,
-      title: 'Better Security',
-      description: 'Extra layers of protection keep your ad accounts and data safe from unauthorized access.'
-    },
-    {
-      icon: <BarChart3 className="h-6 w-6 text-white" />,
-      title: 'Detailed Analytics',
-      description: 'Access reporting tools that give you deeper insights into your campaign performance.'
-    },
-    {
-      icon: <Layers className="h-6 w-6 text-white" />,
-      title: 'Multiple Pixels',
-      description: 'Set up and manage several pixels for more precise audience tracking and retargeting.'
-    },
-    {
-      icon: <Share2 className="h-6 w-6 text-white" />,
-      title: 'Easy Asset Sharing',
-      description: 'Share pages, pixels, and ad accounts between agencies and clients without headaches.'
+      title: 'Builds Trust & Credibility',
+      description: "A verified business account shows your business is real. It cuts down the risk of scams and improves reputation. It also boosts your brand's reputation."
     },
     {
       icon: <ShieldAlert className="h-6 w-6 text-white" />,
-      title: 'Fewer Restrictions',
-      description: 'Verified accounts deal with far fewer random bans and limitations from Meta.'
+      title: 'Prevents Ad Account Restrictions',
+      description: 'Verified accounts face fewer suspicions which helps you grow your business. You can focus on it without fear of sudden suspensions.'
+    },
+    {
+      icon: <Target className="h-6 w-6 text-white" />,
+      title: 'Advanced Advertising Features',
+      description: 'Access exclusive tools like Facebook Pay, Offline custom audience targeting and API integrations. These features streamline marketing and enhance ROI.'
+    },
+    {
+      icon: <Lock className="h-6 w-6 text-white" />,
+      title: 'Better Security & Protection',
+      description: 'A verified business account prevents against cyber threats. It provides extra protections and simplifies account recovery if unauthorized access happens.'
+    },
+    {
+      icon: <Globe className="h-6 w-6 text-white" />,
+      title: 'Facebook Commerce & Marketplace',
+      description: "Only verified businesses can access Facebook's premium features, which include Facebook Shops and Marketplace. These offer secure checkout options and wider customer reach."
+    },
+    {
+      icon: <Users className="h-6 w-6 text-white" />,
+      title: 'Easier Business Account Recovery',
+      description: 'A verified account helps you recover if your account is hacked, restricted, or disabled. It also quickly proves your identity to Meta.'
     }
   ]
 
   return (
     <section className="py-20 bg-[#F8F9FB]">
       <div className="container">
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-[#1877F2]">
-            Why Verified BM?
-          </span>
+        <div className="mx-auto mb-16 max-w-4xl text-center">
           <h2 className="mb-6 text-3xl font-extrabold text-[#0D1625] sm:text-4xl md:text-5xl">
-            Why Smart Advertisers Use Verified BMs
+            Why Use a Verified Facebook Business Manager (Verified BM)?
           </h2>
           <p className="text-lg text-slate-500">
-            If you're serious about Meta ads, a verified BM isn't optional — it's the foundation.
+            A verified Facebook Business Manager confirms your business identity. Meta approves it, building your credibility. You also have access to valuable features. Verifying your Business Manager is crucial for success.
           </p>
         </div>
 
