@@ -15,6 +15,11 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "VBB Store - Buy Verified Business Manager & WhatsApp Business API",
   description: "Purchase verified Facebook Business Managers, WhatsApp Business API accounts, and ad accounts. 100% verified, instant delivery, 24/7 support. Trusted by 10,000+ advertisers.",
+  icons: {
+    icon: '/images/logo.jpg',
+    shortcut: '/images/logo.jpg',
+    apple: '/images/logo.jpg',
+  },
 };
 
 export default function RootLayout({
