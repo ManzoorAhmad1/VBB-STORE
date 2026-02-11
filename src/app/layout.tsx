@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import FloatingContactButtons from "@/components/ui/FloatingContactButtons";
+import Chatbot from "@/components/ui/Chatbot";
 
 
 const roboto = Roboto({
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         {children}
         <FloatingContactButtons />
+        <Chatbot />
       </body>
     </html>
   );

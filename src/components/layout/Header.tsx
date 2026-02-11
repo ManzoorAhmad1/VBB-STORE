@@ -5,8 +5,10 @@ import Image from 'next/image'
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 transition-all duration-300 bg-background">
-      <div className="container flex h-[72px] items-center justify-between">
+    <>
+      <div className="h-[72px] w-full" />
+      <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-white shadow-sm">
+        <div className="container flex h-[72px] items-center justify-between">
         <Link className="flex items-center group" href="/">
           <Image 
             src="/assets/logo.png" 
@@ -47,9 +49,11 @@ const Header = () => {
             </button>
           </Link>
           
-          <button className="items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 hidden md:block rounded-xl shadow-md shadow-primary/20 font-bold px-5" aria-label="Get started - Contact us on WhatsApp">
-            Get Started
-          </button>
+          <a href="https://wa.me/8801302669333" target="_blank" rel="noopener noreferrer">
+            <button className="items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 hidden md:block rounded-xl shadow-md shadow-primary/20 font-bold px-5" aria-label="Get started - Contact us on WhatsApp">
+              Get Started
+            </button>
+          </a>
           
           <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10 lg:hidden rounded-xl" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu h-5 w-5">
@@ -59,8 +63,9 @@ const Header = () => {
             </svg>
           </button>
         </div>
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   )
 }
 
