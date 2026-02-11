@@ -1,0 +1,585 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VBB Store Color Scheme - Root Variables */
+:root {
+  /* Main Brand Colors */
+  --vbb-primary: #1877f2;        /* Facebook Blue */
+  --vbb-secondary: #25d366;      /* WhatsApp Green */
+  --vbb-accent: #ff6b35;         /* Accent Orange */
+  --vbb-dark: #0a0b1a;          /* Dark Background */
+  --vbb-light: #f8f9fa;         /* Light Background */
+  
+  /* shadcn/ui compatible colors - Light Mode */
+  --background: 0 0% 100%;                    /* White */
+  --foreground: 222.2 84% 4.9%;              /* Dark Text */
+  
+  --card: 0 0% 100%;                         /* White Cards */
+  --card-foreground: 222.2 84% 4.9%;        /* Dark Text on Cards */
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  
+  --primary: 221 83% 53%;                    /* Facebook Blue (#1877f2) */
+  --primary-foreground: 210 40% 98%;        /* White Text on Primary */
+  
+  --secondary: 210 40% 96.1%;               /* Light Gray */
+  --secondary-foreground: 222.2 47.4% 11.2%; /* Dark Text */
+  
+  --muted: 210 40% 96.1%;                   /* Muted Background */
+  --muted-foreground: 215.4 16.3% 46.9%;   /* Muted Text */
+  
+  --accent: 210 40% 96.1%;                  /* Accent Background */
+  --accent-foreground: 222.2 47.4% 11.2%;  /* Accent Text */
+  
+  --destructive: 0 84.2% 60.2%;            /* Red */
+  --destructive-foreground: 210 40% 98%;   /* White */
+  
+  --border: 214.3 31.8% 91.4%;             /* Light Gray Border */
+  --input: 214.3 31.8% 91.4%;              /* Input Border */
+  --ring: 221 83% 53%;                     /* Focus Ring - Primary Blue */
+  
+  --radius: 0.75rem;                        /* Border Radius */
+  
+  /* Custom Utility Colors */
+  --success: 142 71% 45%;                   /* Green */
+  --warning: 38 92% 50%;                    /* Orange */
+  --info: 199 89% 48%;                      /* Blue */
+  
+  /* Legacy support */
+  --primary-dark: #0a0b1a;
+  --primary-navy: #1877f2;
+  --secondary-purple: #6C3BAF;
+  --accent-orange: #ff6b35;
+  --text-white: #FFFFFF;
+  --text-gray: #6B7280;
+  --border-gray: #E5E7EB;
+  --card-bg: #FFFFFF;
+  --purple: #662D91;
+  --orange: #ff6b35;
+  --nav-dark: #0a0b1a;
+  --accent: #ff6b35;
+  --white: #fff;
+  --primary-orange: #ff6b35;
+  --primary-blue: #1877f2;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+/* Dark Mode Color Scheme */
+.dark {
+  --background: 224 71% 4%;                 /* Very Dark Blue */
+  --foreground: 213 31% 91%;                /* Light Text */
+  
+  --card: 224 71% 6%;                       /* Dark Card */
+  --card-foreground: 213 31% 91%;          /* Light Text */
+  
+  --popover: 224 71% 6%;
+  --popover-foreground: 213 31% 91%;
+  
+  --primary: 221 83% 53%;                   /* Same Facebook Blue */
+  --primary-foreground: 210 40% 98%;       /* White */
+  
+  --secondary: 222.2 47.4% 11.2%;          /* Dark Secondary */
+  --secondary-foreground: 210 40% 98%;     /* Light Text */
+  
+  --muted: 223 47% 11%;                    /* Dark Muted */
+  --muted-foreground: 215.4 16.3% 56.9%;  /* Gray Text */
+  
+  --accent: 223 47% 11%;                   /* Dark Accent */
+  --accent-foreground: 210 40% 98%;        /* Light Text */
+  
+  --destructive: 0 63% 31%;                /* Dark Red */
+  --destructive-foreground: 210 40% 98%;   /* White */
+  
+  --border: 223 47% 15%;                   /* Dark Border */
+  --input: 223 47% 15%;                    /* Dark Input Border */
+  --ring: 221 83% 53%;                     /* Focus Ring */
+  
+  /* Custom colors for dark mode */
+  --vbb-dark: #ffffff;
+  --vbb-light: #0a0b1a;
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply border-border;
+    font-family: var(--font-roboto), 'Roboto', sans-serif !important;
+  }
+
+  body {
+    font-family: var(--font-roboto), 'Roboto', sans-serif !important;
+    @apply antialiased bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+  
+  /* Container - Responsive width: 100% mobile, up to 95% on large screens */
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container {
+      width: 95% !important;
+      max-width: 95% !important;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      width: 95% !important;
+      max-width: 95% !important;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .container {
+      width: 95% !important;
+      max-width: 95% !important;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .container {
+      width: 95% !important;
+      max-width: 95% !important;
+    }
+  }
+
+  /* Remove focus outline from inputs */
+  input:focus,
+  input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+
+  /* Prevent horizontal scroll */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Apply font to all text elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  div {
+    font-family: var(--font-roboto), 'Roboto', sans-serif !important;
+  }
+
+  /* Professional Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/80;
+  }
+
+  /* Selection Color */
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Focus Styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+}
+
+/* Custom Components */
+@layer components {
+
+  /* Event Card */
+  .event-card {
+    @apply bg-card rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer border border-border;
+  }
+  
+  /* VBB Product Card */
+  .product-card {
+    @apply bg-card rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/20 cursor-pointer border border-border;
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-lg shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-vbb-secondary text-white hover:bg-vbb-secondary/90 hover:scale-105 hover:shadow-lg shadow-vbb-secondary/20 focus:outline-none focus:ring-2 focus:ring-vbb-secondary focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-whatsapp {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-vbb-secondary text-white hover:bg-[#20ba5a] hover:scale-105 hover:shadow-lg shadow-vbb-secondary/20;
+  }
+  
+  .btn-accent {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-vbb-accent text-white hover:bg-vbb-accent/90 hover:scale-105 hover:shadow-lg shadow-vbb-accent/20;
+  }
+
+  /* Category Tab */
+  .category-tab {
+    @apply px-6 py-3 text-sm font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer hover:text-primary relative rounded-lg;
+  }
+
+  .category-tab.active {
+    @apply text-primary bg-primary/10;
+  }
+
+  /* Section Styles */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply relative px-4 py-2 hover:text-primary transition-colors duration-200 text-sm font-medium tracking-wide;
+  }
+
+  .nav-link.active {
+    @apply text-primary;
+  }
+
+  /* Typography */
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-base sm:text-lg text-muted-foreground leading-relaxed;
+  }
+  
+  /* VBB Specific */
+  .vbb-badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary;
+  }
+  
+  .vbb-card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/20;
+  }
+}
+
+/* Animations */
+@layer utilities {
+
+  /* Text Gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-accent-orange to-secondary-purple bg-clip-text text-transparent;
+  }
+
+  /* Hero Animations */
+  .animate-hero-fade-left {
+    animation: heroFadeLeft 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-hero-fade-right {
+    animation: heroFadeRight 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-hero-fade-up {
+    animation: heroFadeUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-hero-scale-in {
+    animation: heroScaleIn 0.8s ease-out forwards;
+  }
+
+  .animate-border-rotate {
+    position: relative;
+  }
+
+  .animate-border-rotate::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(45deg, transparent, rgba(200, 156, 107, 0.3), transparent);
+    animation: borderRotate 3s linear infinite;
+  }
+
+  @keyframes heroFadeLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes heroFadeRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes heroFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes heroScaleIn {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes borderRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Popup Effect */
+  .group:hover .icon-popup {
+    animation: popup-effect 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+  /* Gradient Border */
+  .animated-border-wrapper {
+    position: relative;
+    background: linear-gradient(90deg, #0B1F3B, #D4AF37, #800020, #0B1F3B);
+    background-size: 300% 300%;
+    animation: gradient 3s ease infinite;
+    padding: 2px;
+    border-radius: 0.75rem;
+  }
+
+  /* Keyframes */
+  @keyframes popup-effect {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes marqueeUp {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes marqueeDown {
+    0% {
+      transform: translateY(-50%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes marqueeHorizontal {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes floatSlow {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  /* Responsive utilities */
+  .mobile-only {
+    @apply block sm:hidden;
+  }
+
+  .tablet-only {
+    @apply hidden sm:block lg:hidden;
+  }
+
+  .desktop-only {
+    @apply hidden lg:block;
+  }
+
+  .mobile-tablet-only {
+    @apply block lg:hidden;
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes slideReveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+    transform: translateX(-20px) scale(1.4);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transform: translateX(0) scale(1.4);
+  }
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+/* Add these styles for Help Center page */
+
+/* Chat bot scrollbar */
+#chatBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chatBox::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+#chatBox::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+#chatBox::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Animation for sponsor carousel */
+@keyframes scrollSponsors {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
