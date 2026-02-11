@@ -19,63 +19,69 @@ const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
-      category: 'VERIFIED BM',
-      readTime: '5 min read',
-      date: 'Dec 15, 2025',
-      title: 'What is a Verified Business Manager and Why You Need One in 2026',
-      categoryLabel: 'VERIFIED BM',
-      excerpt: 'Learn what a verified Facebook Business Manager is, how verification works, and why it\'s essential for serious advertisers.',
-      slug: 'verified-business-manager-guide-2026'
+      image: '/image/blogImage1.webp',
+      category: 'GUIDES',
+      readTime: '8 min read',
+      date: 'Jan 30, 2026',
+      title: 'How to Use Meta Business Manager: A Complete Step-by-Step Guide',
+      categoryLabel: 'GUIDES',
+      excerpt: 'Master the Meta Business Manager with our comprehensive guide covering everything from setup to advanced asset management.',
+      slug: 'how-to-use-meta-business-manager'
     },
     {
       id: 2,
-      category: 'WHATSAPP API',
-      readTime: '7 min read',
-      date: 'Dec 18, 2025',
-      title: 'Complete Guide to WhatsApp Business API: Setup, Benefits & Best Practices',
-      categoryLabel: 'WHATSAPP API',
-      excerpt: 'Everything you need to know about WhatsApp Business API.',
-      slug: 'whatsapp-business-api-complete-guide'
+      image: '/image/blogImage2.webp',
+      category: 'VERIFIED BM',
+      readTime: '6 min read',
+      date: 'Dec 10, 2025',
+      title: 'How to Verify Facebook Business Manager Account? Step by Step',
+      categoryLabel: 'VERIFIED BM',
+      excerpt: 'Struggling with verification? Follow our updated 2025 process to get your Business Manager verified quickly and reliably.',
+      slug: 'how-to-verify-facebook-business-manager'
     },
     {
       id: 3,
-      category: 'TIPS & GUIDES',
-      readTime: '6 min read',
-      date: 'Dec 21, 2025',
-      title: 'How to Avoid Facebook Business Manager Bans: Expert Tips for 2026',
-      categoryLabel: 'TIPS & GUIDES',
-      excerpt: 'Protect your advertising investment with these proven strategies.',
-      slug: 'avoid-facebook-business-manager-bans'
+      image: '/image/blogImage3.webp',
+      category: 'VERIFIED BM',
+      readTime: '5 min read',
+      date: 'Dec 03, 2025',
+      title: 'What Is a Verified Business Manager and Why Do Advertisers Need It?',
+      categoryLabel: 'VERIFIED BM',
+      excerpt: 'Understand the crucial benefits of using a verified BM for high-spend campaigns and avoiding restrictions.',
+      slug: 'what-is-verified-business-manager'
     },
     {
       id: 4,
+      image: '/image/blogImage4.webp',
       category: 'VERIFIED BM',
       readTime: '4 min read',
-      date: 'Dec 14, 2025',
-      title: 'Business Manager vs Personal Ad Account: Which Should You Use?',
+      date: 'May 23, 2025',
+      title: 'Verified Facebook Business Manager: Build Trust, Boost Performance',
       categoryLabel: 'VERIFIED BM',
-      excerpt: 'A detailed comparison between running ads from a personal account versus a Business Manager.',
-      slug: 'business-manager-vs-personal-account'
+      excerpt: 'How verified accounts improve ad performance, lower CPMs, and build trust with the platform.',
+      slug: 'verified-facebook-business-manager-benefits'
     },
     {
       id: 5,
+      image: '/image/blogImage5.webp',
       category: 'GUIDES',
-      readTime: '4 min read',
-      date: 'Jan 10, 2026',
-      title: 'Why Cryptocurrency Is the Preferred Payment for Digital Account Purchases',
+      readTime: '7 min read',
+      date: 'May 02, 2025',
+      title: 'How to Buy Verified Facebook Business Manager Accounts Safely in 2025',
       categoryLabel: 'GUIDES',
-      excerpt: 'Discover why crypto payments have become the standard for buying digital ad accounts.',
-      slug: 'cryptocurrency-payment-guide'
+      excerpt: 'Avoid scams and low-quality accounts by learning the safe ways to purchase verified assets.',
+      slug: 'how-to-buy-verified-bm-safely-2025'
     },
     {
       id: 6,
+      image: '/image/blogImage6.webp',
       category: 'TIPS & GUIDES',
-      readTime: '9 min read',
-      date: 'Jan 5, 2026',
-      title: 'Scaling Meta Ads in 2026: Strategies That Actually Work',
+      readTime: '6 min read',
+      date: 'Sep 22, 2025',
+      title: 'Top 5 Mistakes New Buyers Make When Purchasing Meta Assets',
       categoryLabel: 'TIPS & GUIDES',
-      excerpt: 'Proven scaling strategies for Meta advertising in 2026.',
-      slug: 'scaling-meta-ads-2026'
+      excerpt: 'Don\'t lose your money. Learn the common pitfalls new buyers face and how to avoid them effortlessly.',
+      slug: 'top-5-mistakes-buying-meta-assets'
     }
   ]
 

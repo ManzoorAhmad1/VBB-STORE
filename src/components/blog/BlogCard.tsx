@@ -2,10 +2,12 @@
 
 import { Clock, Calendar, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface BlogCardProps {
   post: {
     id: number
+    image?: string
     category: string
     readTime: string
     date: string
@@ -35,13 +37,22 @@ const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <Link href={`/blog/${post.slug}`}>
       <article className="group h-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-lg">
-        {/* Featured Image Placeholder */}
-        <div className="aspect-[16/10] bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50">
-          <div className="flex h-full items-center justify-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
-              {post.category}
-            </span>
-          </div>
+        {/* Featured Image */}
+        <div className="relative aspect-[16/10] bg-gray-100 overflow-hidden">
+          {post.image ? (
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50">
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
+                {post.category}
+                </span>
+            </div>
+          )}
         </div>
 
         {/* Content */}

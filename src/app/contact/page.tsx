@@ -3,13 +3,14 @@
 import { useState } from 'react'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { MessageCircle, Send, Mail, MessageSquare, Clock, Users, Star, Headphones, Shield, Zap, Globe, CheckCircle, ChevronRight } from 'lucide-react'
+import { MessageCircle, Send, Mail, MessageSquare, Clock, Users, Star, Headphones, Shield, Zap, Globe, CheckCircle, ChevronRight, Phone, User, MapPin, CheckSquare, UserCog, CreditCard, UserCheck, Lock, TrendingUp } from 'lucide-react'
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    phone: '',
+    company: '',
     message: ''
   })
 
@@ -19,75 +20,76 @@ const ContactPage = () => {
     console.log('Form submitted:', formData)
   }
 
-  const stats = [
-    { icon: <Users className="h-6 w-6" />, value: '5,000+', label: 'Happy Customers' },
-    { icon: <Clock className="h-6 w-6" />, value: '< 2 min', label: 'Average Response' },
-    { icon: <Users className="h-6 w-6" />, value: '50+', label: 'Team Members' },
-    { icon: <Star className="h-6 w-6" />, value: '4.9/5', label: 'Satisfaction Score' }
+  const commonReasons = [
+    { icon: <CheckSquare className="h-6 w-6" />, title: 'Buying a Verified BM', desc: 'Secure purchase of Verified Business Managers.' },
+    { icon: <UserCog className="h-6 w-6" />, title: 'Account Setup', desc: 'Guidance on setting up your Business Manager correctly.' },
+    { icon: <CreditCard className="h-6 w-6" />, title: 'Payment Queries', desc: 'Questions about billing, transactions, and methods.' },
+    { icon: <Users className="h-6 w-6" />, title: 'General Inquiries', desc: 'Assistance with any other questions or concerns.' }
   ]
 
   const contactChannels = [
     {
+      icon: <Phone className="h-6 w-6" />,
+      name: 'Phone',
+      badge: '',
+      description: 'Call us directly',
+      detail: '+880 130 266 9333',
+      link: 'tel:+8801302669333'
+    },
+    {
+      icon: <User className="h-6 w-6" />,
+      name: 'Support',
+      description: 'Support forum',
+      detail: 'Available 24h',
+      link: '#'
+    },
+    {
       icon: <MessageCircle className="h-6 w-6" />,
       name: 'WhatsApp',
-      badge: 'INSTANT',
-      description: 'Instant chat support',
-      detail: '+880 1302 669333',
+      badge: 'FAST',
+      description: 'Chat with us',
+      detail: '+880 130 266 9333',
       link: 'https://wa.me/8801302669333'
     },
     {
-      icon: <Send className="h-6 w-6" />,
-      name: 'Telegram',
-      description: 'Fast and reliable messaging',
-      detail: '@Verifiedbmbuy',
-      link: 'https://t.me/Verifiedbmbuy'
-    },
-    {
-      icon: <Mail className="h-6 w-6" />,
-      name: 'Email',
-      description: 'For detailed inquiries',
-      detail: 'support@vbbstore.com',
-      link: 'mailto:support@vbbstore.com'
-    },
-    {
-      icon: <MessageSquare className="h-6 w-6" />,
-      name: 'Messenger',
-      description: 'Facebook Messenger',
-      detail: 'VBB Store',
+      icon: <MapPin className="h-6 w-6" />,
+      name: 'Address',
+      description: 'Visit us',
+      detail: 'Madergonj, Rangpur',
       link: '#'
     }
   ]
 
-  const trustReasons = [
+  const supportFeatures = [
     {
       icon: <Headphones className="h-8 w-8" />,
-      title: '24/7 Live Support',
-      description: 'Our team is always online — reach us anytime on WhatsApp, Telegram, or email for instant help.'
+      title: '24/7 Support',
+      description: 'Our team is always online — reach us anytime for instant help.'
     },
     {
-      icon: <Shield className="h-8 w-8" />,
+      icon: <MessageCircle className="h-8 w-8" />,
+      title: 'Fast WhatsApp Responses',
+      description: 'We prioritize quick communication through WhatsApp for your convenience.'
+    },
+    {
+      icon: <UserCheck className="h-8 w-8" />,
+      title: 'Dedicated Account Managers',
+      description: 'Get personalized support to manage and scale your accounts effectively.'
+    },
+    {
+      icon: <Lock className="h-8 w-8" />,
       title: 'Secure Transactions',
-      description: 'Every transaction is encrypted and secure. We never share sensitive credentials after delivery.'
-    },
-    {
-      icon: <Zap className="h-8 w-8" />,
-      title: 'Lightning-Fast Delivery',
-      description: 'Most orders are delivered within 1-4 hours. We prioritize speed without compromising quality.'
+      description: 'Every transaction is encrypted and secure. We ensure complete privacy.'
     },
     {
       icon: <CheckCircle className="h-8 w-8" />,
-      title: '7-Day Replacement',
-      description: 'If you face an issue with a 7-day replacement guarantee. No questions asked.'
+      title: 'Quick Resolution Guarantee',
+      description: 'We guarantee fast resolutions to any issues you might encounter.'
     },
     {
-      icon: <Shield className="h-8 w-8" />,
-      title: 'Verified Products Only',
-      description: 'We only sell fully verified, premium accounts that we ready to use immediately.'
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      title: 'Global Coverage',
-      description: 'Serving customers in 50+ countries worldwide with localized support and guidance.'
+      icon: <TrendingUp className="h-8 w-8" />,
+      title: 'Step-by-Step Guidance',
+      description: 'Detailed walkthroughs to help you set up and use your assets.'
     }
   ]
 
@@ -162,16 +164,19 @@ const ContactPage = () => {
       {/* Stats Section */}
       <section className="border-y border-slate-100 bg-white py-12">
         <div className="container">
+          <div className="text-center mb-8">
+             <h2 className="text-2xl font-bold text-[#0D1625]">Common Reasons to Contact Us</h2>
+          </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 text-[#1877F2]">
-                  {stat.icon}
+            {commonReasons.map((reason, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-[#1877F2]">
+                  {reason.icon}
                 </div>
-                <div className="mb-1 text-3xl font-extrabold text-[#0D1625]">
-                  {stat.value}
+                <div className="mb-2 text-lg font-bold text-[#0D1625]">
+                  {reason.title}
                 </div>
-                <div className="text-sm text-slate-500">{stat.label}</div>
+                <div className="text-sm text-slate-500">{reason.desc}</div>
               </div>
             ))}
           </div>
@@ -288,18 +293,31 @@ const ContactPage = () => {
                     </div>
                   </div>
 
-                  <div>
-                    <label className="mb-2 block text-sm font-bold text-[#0D1625]">
-                      Subject *
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="What's this about?"
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:border-[#1877F2] focus:outline-none focus:ring-2 focus:ring-blue-50"
-                      required
-                    />
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <label className="mb-2 block text-sm font-bold text-[#0D1625]">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        placeholder="+1 (555) 000-0000"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:border-[#1877F2] focus:outline-none focus:ring-2 focus:ring-blue-50"
+                      />
+                    </div>
+                    <div>
+                      <label className="mb-2 block text-sm font-bold text-[#0D1625]">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Your company name"
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm focus:border-[#1877F2] focus:outline-none focus:ring-2 focus:ring-blue-50"
+                      />
+                    </div>
                   </div>
 
                   <div>
@@ -318,15 +336,10 @@ const ContactPage = () => {
 
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-[#1877F2] py-3 font-bold text-white shadow-lg transition-all hover:bg-blue-700"
+                    className="w-full rounded-xl bg-[#1877F2] py-3 font-bold text-white shadow-lg transition-all hover:bg-blue-700 uppercase tracking-wide text-xs"
                   >
-                    <Send className="mr-2 inline-block h-5 w-5" />
-                    Send Message
+                    Ask a Question
                   </button>
-
-                  <p className="text-center text-xs text-slate-400">
-                    We typically respond within 30 minutes during business hours.
-                  </p>
                 </form>
               </div>
             </div>
@@ -339,24 +352,24 @@ const ContactPage = () => {
         <div className="container">
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#1877F2]">
-              WHY US
+              SUPPORT
             </p>
             <h2 className="text-3xl font-extrabold text-[#0D1625]">
-              Why Customers Trust VBB STORE
+              Support Features
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {trustReasons.map((reason, index) => (
-              <div key={index} className="rounded-xl border border-slate-100 bg-slate-50 p-6">
+            {supportFeatures.map((feature, index) => (
+              <div key={index} className="rounded-xl border border-slate-100 bg-slate-50 p-6 transition-all hover:shadow-md hover:border-blue-100">
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-[#1877F2] text-white">
-                  {reason.icon}
+                  {feature.icon}
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-[#0D1625]">
-                  {reason.title}
+                  {feature.title}
                 </h3>
                 <p className="text-sm text-slate-500">
-                  {reason.description}
+                  {feature.description}
                 </p>
               </div>
             ))}

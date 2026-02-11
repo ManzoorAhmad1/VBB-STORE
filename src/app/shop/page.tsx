@@ -23,7 +23,7 @@ const ShopPage = () => {
   const products = [
     {
       id: 1,
-      image: '/images/card1.jpeg',
+      image: '/image/shopPage1.webp',
       category: 'Verified BM',
       title: 'BM Verification Service: Verify Facebook Business Manager',
       description: 'Professional service to verify your Facebook Business Manager (BM) with real documentation. Fast and reliable.',
@@ -34,7 +34,7 @@ const ShopPage = () => {
     },
     {
       id: 2,
-      image: '/images/card2.jpeg',
+      image: '/image/shopPage2.webp',
       category: 'Verified BM',
       title: 'Buy Ready Made Instagram Account – 2023| VERIFIED BM BUY-VBB',
       description: 'Aged and verified Instagram accounts ready for immediate use. Perfect for brand building.',
@@ -45,7 +45,7 @@ const ShopPage = () => {
     },
     {
       id: 3,
-      image: '/images/card3.jpeg',
+      image: '/image/shopPage3.webp',
       category: 'Reinstated Profiles',
       title: 'Buy reinstate Facebook account | Business use, Personal, or Running ads.',
       description: 'Restored Facebook profiles suitable for business use, personal activities, or running ads without restrictions.',
@@ -55,7 +55,7 @@ const ShopPage = () => {
     },
     {
       id: 4,
-      image: '/images/4.jpeg',
+      image: '/image/shopPage4.webp',
       category: 'Verified BM',
       title: 'Buy Verified BM 10 | Real Documents Verified Facebook Business Manager',
       description: 'High-tier Verified Business Manager (BM 10) verified with authentic documents for stable ad scaling.',
@@ -65,7 +65,7 @@ const ShopPage = () => {
     },
     {
       id: 5,
-      image: '/images/card5.jpeg',
+      image: '/image/shopPage5.webp',
       category: 'Verified BM',
       title: 'Buy Verified BM 3 | Verified Facebook Business Manager 3',
       description: 'Verified Business Manager level 3. A reliable asset for managing your Facebook ad campaigns.',
@@ -76,7 +76,7 @@ const ShopPage = () => {
     },
     {
       id: 6,
-      image: '/images/card6.jpeg',
+      image: '/image/shopPage6.webp',
       category: 'Verified BM',
       title: 'Buy Verified BM 5 | Verified Facebook Business Manager',
       description: 'Premium Verified BM 5 account. Ideal for high-spend advertisers needing stability.',
@@ -86,7 +86,7 @@ const ShopPage = () => {
     },
     {
       id: 7,
-      image: '/images/card7.jpeg',
+      image: '/image/shopPage7.webp',
       category: 'Verified BM',
       title: 'Buy Verified BM with Verified Ads Account',
       description: 'Complete package: Verified BM + Verified Ads Account. Start advertising instantly without bans.',
@@ -96,7 +96,7 @@ const ShopPage = () => {
     },
     {
       id: 8,
-      image: '/images/card8.jpeg',
+      image: '/image/shopPage8.svg',
       category: 'WhatsApp API',
       title: 'Buy WhatsApp Business API Limit 10000 With FB Verified BM – Verified Meta Business Messaging',
       description: 'Broadcast to 10k customers daily with this Verified WhatsApp Business API + BM bundle.',
@@ -106,7 +106,7 @@ const ShopPage = () => {
     },
     {
       id: 9,
-      image: '/images/card9.jpeg',
+      image: '/image/shopPage9.webp',
       category: 'WhatsApp API',
       title: 'Buy WhatsApp Business API limit 2000 With FB Verified BM',
       description: 'Scale your messaging with 2000 daily limit WhatsApp Business API. Includes verified BM.',
@@ -116,7 +116,7 @@ const ShopPage = () => {
     },
     {
       id: 10,
-      image: '/images/card1.jpeg',
+      image: '/image/shopPage10.webp',
       category: 'WhatsApp API',
       title: 'Buy WhatsApp Business API limit 250 With FB Verified BM',
       description: 'Starter WhatsApp Business API package with 250 daily limit. Verified BM included.',
@@ -127,7 +127,7 @@ const ShopPage = () => {
     },
     {
       id: 11,
-      image: '/images/card2.jpeg',
+      image: '/image/shopPage11.webp',
       category: 'TikTok Ads',
       title: 'Verified TikTok agency ad account buy-Verified & High-Limit TikTok Ads Account for Agencies',
       description: 'Agency-grade TikTok Ads account. High spending limits and verified status for serious marketers.',
@@ -137,7 +137,7 @@ const ShopPage = () => {
     },
     {
       id: 12,
-      image: '/images/card3.jpeg',
+      image: '/image/shopPage12.webp',
       category: 'Verified BM',
       title: 'Buy Verified BM 1 | Verified Facebook Business Manager 1 for Stable Ads',
       description: 'Entry-level Verified BM 1. Stable foundation for your Facebook advertising campaigns.',

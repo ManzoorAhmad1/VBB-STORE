@@ -87,21 +87,6 @@ const ProductCard = ({ product }: any) => {
                         </Link>
                     </div>
                 </div>
-
-                        <Link href={`/checkout/${product.id}`} className="w-full">
-                            <button className="w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-bold text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 border-b-2 hover:border-b-gray-300">
-                                Buy Now
-                            </button>
-                        </Link>
-
-                        <div className="flex items-center justify-center gap-1.5 pt-2 text-[10px] sm:text-xs text-green-600 font-medium opacity-90">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 sm:w-3.5 sm:h-3.5">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Verified Account • Delivered Same Day</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     )

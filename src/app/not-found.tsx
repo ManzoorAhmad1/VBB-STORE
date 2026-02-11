@@ -1,200 +1,56 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Home, Search, Shield, ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import { Button } from "rizzui";
+import Link from 'next/link'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import { Construction, ArrowRight, Home } from 'lucide-react'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-navy via-[#0B1F3B] to-gray-900 flex items-center justify-center px-4 overflow-hidden">
-      {/* Animated grid background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#D4AF3710_1px,transparent_1px),linear-gradient(to_bottom,#D4AF3710_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      </div>
-
-      {/* Floating particles */}
-      {[...Array(15)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 bg-accent-gold rounded-full"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            opacity: [0.2, 1, 0.2],
-            scale: [1, 1.5, 1],
-          }}
-          transition={{
-            duration: 3 + Math.random() * 2,
-            repeat: Infinity,
-            delay: Math.random() * 2,
-          }}
-        />
-      ))}
-
-      <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* 404 Shield Animation */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5, rotateY: 0 }}
-          animate={{ 
-            opacity: 1, 
-            scale: 1,
-            rotateY: 360,
-          }}
-          transition={{ 
-            duration: 1,
-            rotateY: {
-              duration: 2,
-              repeat: Infinity,
-              ease: "linear"
-            }
-          }}
-          className="mb-8 inline-block"
-          style={{ transformStyle: "preserve-3d" }}
-        >
-          <div className="relative">
-            {/* Glow effect */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-48 h-48 bg-accent-gold/20 rounded-full blur-3xl" />
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-grow flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-cyan-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        
+        <div className="container relative z-10 px-4 md:px-6 py-16 text-center">
+            <div className="mb-8 flex justify-center">
+                <div className="relative">
+                    <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#1877F2] to-cyan-400 opacity-30 blur-lg"></div>
+                    <div className="relative rounded-full bg-white p-6 shadow-xl ring-1 ring-slate-900/5">
+                        <Construction className="h-16 w-16 text-[#1877F2]" strokeWidth={1.5} />
+                    </div>
+                </div>
             </div>
+          
+            <h1 className="text-4xl md:text-5xl font-extrabold text-[#0D1625] mb-4 tracking-tight">
+                Coming Soon
+            </h1>
             
-            <Shield className="w-32 h-32 md:w-40 md:h-40 text-accent-gold drop-shadow-[0_0_30px_rgba(212,175,55,0.5)] relative z-10" />
+            <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-2xl mx-auto leading-relaxed">
+                We're working hard to bring you this page. It's currently under construction and will be available shortly. Stay tuned for something amazing!
+            </p>
             
-            {/* 404 Text Inside Shield */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="absolute inset-0 flex items-center justify-center"
-            >
-              <span className="text-4xl md:text-5xl font-bold text-primary-navy">
-                404
-              </span>
-            </motion.div>
-          </div>
-        </motion.div>
-
-        {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
-        >
-          Page Not Found
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
-        >
-          Oops! The page you're looking for has been moved, deleted, or possibly never existed.
-        </motion.p>
-
-        {/* Error Code */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="inline-flex items-center space-x-2 px-4 py-2 bg-accent-gold/20 backdrop-blur-sm border border-accent-gold/50 text-accent-gold rounded-full text-sm font-semibold mb-12"
-        >
-          <Search className="h-4 w-4" />
-          <span>Error Code: 404 - Resource Not Found</span>
-        </motion.div>
-
-        {/* Action Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Link href="/">
-            <Button
-              size="xl"
-              className="bg-accent-gold text-primary-navy hover:bg-yellow-600 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-accent-gold/50 transition-all duration-300 flex items-center space-x-2"
-            >
-              <Home className="h-5 w-5" />
-              <span>Back to Home</span>
-            </Button>
-          </Link>
-
-          <Link href="/contact">
-            <Button
-              size="xl"
-              variant="outline"
-              className="border-2 border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-primary-navy font-semibold px-8 py-4 rounded-full transition-all duration-300 flex items-center space-x-2"
-            >
-              <ArrowLeft className="h-5 w-5" />
-              <span>Contact Support</span>
-            </Button>
-          </Link>
-        </motion.div>
-
-        {/* Helpful Links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-16 pt-8 border-t border-accent-gold/20"
-        >
-          <p className="text-gray-400 mb-4 text-sm">You might be looking for:</p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            {[
-              { label: "Services", href: "/services" },
-              { label: "About Us", href: "/about" },
-              { label: "Pricing", href: "/pricing" },
-              { label: "Blog", href: "/blogs" },
-            ].map((link, index) => (
-              <Link
-                key={link.href}
-                href={link.href}
-              >
-                <motion.span
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.9 + index * 0.1 }}
-                  className="text-gray-300 hover:text-accent-gold transition-colors duration-200 text-sm font-medium underline underline-offset-4"
-                >
-                  {link.label}
-                </motion.span>
-              </Link>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Floating Elements */}
-        <motion.div
-          animate={{
-            y: [0, -20, 0],
-            rotate: [0, 5, -5, 0],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-20 left-10 w-20 h-20 bg-accent-gold/10 rounded-full blur-xl"
-        />
-        <motion.div
-          animate={{
-            y: [0, 20, 0],
-            rotate: [0, -5, 5, 0],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="absolute bottom-20 right-10 w-32 h-32 bg-accent-gold/10 rounded-full blur-xl"
-        />
-      </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link href="/">
+                    <button className="inline-flex h-12 items-center justify-center rounded-xl bg-[#1877F2] px-8 text-sm font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-blue-500/40 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        <Home className="mr-2 h-4 w-4" />
+                        Back to Home
+                    </button>
+                </Link>
+                <Link href="/shop">
+                    <button className="inline-flex h-12 items-center justify-center rounded-xl border-2 border-slate-200 bg-white px-8 text-sm font-bold text-slate-700 shadow-sm transition-all hover:border-[#1877F2] hover:text-[#1877F2] focus:outline-none focus:ring-2 focus:ring-slate-200 focus:ring-offset-2">
+                        Visit Shop
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </button>
+                </Link>
+            </div>
+        </div>
+      </main>
+      
+      <Footer />
     </div>
-  );
+  )
 }

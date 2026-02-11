@@ -2,14 +2,16 @@
 
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { Shield, Target, TrendingUp, Users, Award, Zap, Globe, CheckCircle, MessageCircle, Clock, Star, ChevronRight } from 'lucide-react'
+import { Shield, Target, TrendingUp, Users, Award, Zap, Globe, CheckCircle, MessageCircle, Clock, Star, ChevronRight, Code, Headphones } from 'lucide-react'
 
 const AboutPage = () => {
   const stats = [
-    { value: '5+', label: 'Years in Business' },
-    { value: '10K+', label: 'Happy Customers' },
-    { value: '50+', label: 'Countries Served' },
-    { value: '99%', label: 'Satisfaction Rate' }
+    { value: '2019', label: 'FOUNDING YEAR' },
+    { value: '50000', label: 'HAPPY COSTUMERS' },
+    { value: '1900', label: 'COMPANY WORK WITH US' },
+    { value: '2', label: 'OFFICES' },
+    { value: '7', label: 'TEAM MEMBERS' },
+    { value: '3000', label: 'PROJECTS COMPLETED' }
   ]
 
   const milestones = [
@@ -47,34 +49,24 @@ const AboutPage = () => {
 
   const offerings = [
     {
-      icon: <Shield className="h-6 w-6" />,
-      title: 'Verified BM',
-      description: 'Fully verified Facebook Business Managers with real documentation. Ready for serious advertising.'
+      icon: <CheckCircle className="h-6 w-6" />,
+      title: 'Verified Facebook Business Managers',
+      description: 'Reinstated and verified Business Managers with strong footprints.'
     },
     {
       icon: <MessageCircle className="h-6 w-6" />,
-      title: 'WhatsApp Business API',
-      description: 'Enterprise WABA accounts for bulk messaging, chatbots, and customer support at scale.'
+      title: 'Official WhatsApp Business API',
+      description: 'Complete onboarding for official WhatsApp API accounts to boost your customer engagement.'
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: 'Facebook Ad Accounts',
-      description: 'Verified ad accounts with different spending limits. Start running campaigns right away.'
+      title: 'High-Limit Ad Accounts',
+      description: 'Specialized accounts with "High Limit" spending capabilities for aggressive scaling.'
     },
     {
       icon: <Users className="h-6 w-6" />,
-      title: 'Reinstated Profiles',
-      description: 'Recovered Facebook profiles with clean records and full functionality restored.'
-    },
-    {
-      icon: <Globe className="h-6 w-6" />,
-      title: 'TikTok & Google Ads',
-      description: 'Ready-to-use ad accounts for TikTok and Google. Launch campaigns on day one.'
-    },
-    {
-      icon: <Zap className="h-6 w-6" />,
-      title: 'Custom Solutions',
-      description: 'Bulk orders, dedicated account managers, and tailored setups for agencies.'
+      title: 'Aged & Active Profiles',
+      description: 'High quality, warmed up profiles to reduce the risk of immediate flagging or checkpoints.'
     }
   ]
 
@@ -126,34 +118,44 @@ const AboutPage = () => {
 
   const chooseReasons = [
     {
-      icon: <CheckCircle className="h-6 w-6" />,
-      title: '24/7 Live Support',
-      description: 'Our team is always online. Get help instantly on WhatsApp, Telegram, or email.'
-    },
-    {
       icon: <Shield className="h-6 w-6" />,
-      title: '7-Day Replacement',
-      description: 'Account stopped working? We replace it free within 7 days. No questions asked.'
+      title: 'Real Documents Verification',
+      description: 'We verify every account with genuine documentation to ensure the highest quality and safety for your business.'
     },
     {
       icon: <Zap className="h-6 w-6" />,
       title: 'Instant Delivery',
-      description: 'Most orders delivered within 10-30 minutes. We don\'t make you wait.'
+      description: 'Get your assets delivered immediately after payment. No waiting times, start scaling your campaigns right away.'
     },
     {
-      icon: <Globe className="h-6 w-6" />,
-      title: 'Global Coverage',
-      description: 'Serving 50+ countries with localized support and worldwide shipping.'
+      icon: <Headphones className="h-6 w-6" />,
+      title: '24/7 customer support',
+      description: 'Our dedicated support team is available round the clock to assist you with any issues or queries you might have.'
+    },
+    {
+      icon: <CheckCircle className="h-6 w-6" />,
+      title: 'Low Ban Risk',
+      description: 'Our accounts are warmed up and verified to minimize the risk of restrictions, giving you stable ad performance.'
+    },
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: 'Zero Scams Promise',
+      description: 'We pride ourselves on transparency and legitimacy. You get exactly what you pay for, with no hidden surprises.'
+    },
+    {
+      icon: <Code className="h-6 w-6" />,
+      title: 'API Application Ready',
+      description: 'Accounts come ready for API integrations, making it easier for developers and agencies to automate workflows.'
+    },
+    {
+      icon: <CheckCircle className="h-6 w-6" />,
+      title: 'Legitimate Verification',
+      description: 'We use official verification processes to ensure your Business Managers and Ad Accounts are 100% legitimate.'
     },
     {
       icon: <Award className="h-6 w-6" />,
-      title: '100% Verified',
-      description: 'All accounts verified with real business documentation. Completely legitimate.'
-    },
-    {
-      icon: <TrendingUp className="h-6 w-6" />,
-      title: 'Bulk Discounts',
-      description: 'Need 10, 50, or 100 accounts? We offer volume pricing for agencies.'
+      title: 'Genuine Product',
+      description: 'We sell only authentic, high-quality assets effectively sourced and managed to provide the best value.'
     }
   ]
 
@@ -220,12 +222,50 @@ const AboutPage = () => {
   ]
 
   const faqs = [
-    { question: 'How fast will I get a response?' },
-    { question: 'Do accounts come with full??' },
-    { question: 'What if I have an issue with my order?' },
-    { question: 'Can I test before I buy?' },
-    { question: 'What happens if my account banned?' },
-    { question: 'Do you take refunds?' }
+    { 
+      question: 'How long does delivery take?',
+      answer: 'It is instant. You will get your account details via email right after you pay. In rare cases we take maximum an hour.' 
+    },
+    { 
+      question: 'Are the accounts really verified?',
+      answer: 'Yes, verified BMs are fully verified with documents.' 
+    },
+    { 
+      question: 'What if the account does not work?',
+      answer: 'We offer replacement if there are issues upon login.' 
+    },
+    { 
+      question: 'Can I spend a lot of money on ads right away?',
+      answer: 'High-limit accounts allow for significant spend immediately.' 
+    },
+    { 
+      question: 'Is it safe to use these accounts?',
+      answer: 'Yes, if you follow our safety guides and use proxies.' 
+    },
+    { 
+      question: 'How do I get help if I have a problem?',
+      answer: 'Contact our support team via the contact details provided.' 
+    },
+    { 
+      question: 'What payment methods do you accept?',
+      answer: 'At this time we share only accepted Crypto Payment.' 
+    },
+    { 
+      question: 'Do I need a VPN or Proxy to stay safe?',
+      answer: 'Yes, a high-quality residential proxy is recommended.' 
+    },
+    { 
+      question: 'Can I change the login info to my own?',
+      answer: 'Yes, you can change the credentials after the warm-up period.' 
+    },
+    { 
+      question: 'What happens if the account gets restricted?',
+      answer: 'If it happens due to the account quality, we replace it.' 
+    },
+    { 
+      question: 'Do these accounts come with 2FA?',
+      answer: 'Yes, accounts are secured with 2FA.' 
+    }
   ]
 
   return (
@@ -237,10 +277,10 @@ const AboutPage = () => {
         <div className="container">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 text-4xl font-extrabold sm:text-5xl md:text-6xl">
-              The Most Trusted Name in Verified Meta Accounts
+              About Verified BM Buy Store – Your Trusted Meta Partner
             </h1>
             <p className="mb-8 text-lg text-white/90 md:text-xl">
-              Since 2020, we've helped 10,000+ advertisers, agencies, and businesses scale their campaigns with verified Facebook Business Managers, WhatsApp API accounts, and ad platform access — all with instant delivery and 7-day replacement guarantee.
+              Verified BM Buy Store is a globally recognized digital commerce platform that delivers trusted, high-quality Meta solutions. Our core specialization lies in selling Verified Facebook Business Manager (BM) accounts, WhatsApp Business API (WABA) accounts, and an ecosystem of Meta-integrated services designed to empower digital marketers, advertising agencies, and enterprise businesses.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a href="/shop">
@@ -261,7 +301,7 @@ const AboutPage = () => {
       {/* Stats Section */}
       <section className="border-b border-slate-100 bg-white py-12">
         <div className="container">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="mb-2 text-4xl font-extrabold text-[#1877F2]">
@@ -283,18 +323,27 @@ const AboutPage = () => {
                 OUR STORY
               </p>
               <h2 className="mb-6 text-3xl font-extrabold text-[#0D1625]">
-                From a Simple Idea to a Global Brand
+                Why Choose Verified BM Buy?
               </h2>
               <div className="space-y-4 text-slate-500">
                 <p>
-                  VBB STORE started in 2020 when two media buyers got tired of dealing with unreliable account sellers. We couldn't find verified Business Managers that actually worked, so we decided to solve the problem ourselves.
+                  Running ads today is hard. Most businesses face the same problems:
                 </p>
+                <ul className="list-disc pl-5 space-y-2">
+                    <li>Facebook accounts get restricted.</li>
+                    <li>Ad accounts get banned for no reason.</li>
+                    <li>Verification takes too long.</li>
+                    <li>Setting up WhatsApp APIs is confusing.</li>
+                </ul>
                 <p>
-                  We built relationships with legitimate verification providers and created a system to deliver accounts instantly. What started as a side project quickly turned into a full-time business serving thousands of customers.
+                  We make it easy. Verified BM Buy gives you accounts that are already verified and ready to use. Our accounts are safe, secure, and delivered instantly.
                 </p>
-                <p>
-                  Today, we're proud to be the most trusted name in verified Meta accounts — with 10,000+ satisfied customers, a dedicated support team, and a commitment to quality that's unmatched in the industry.
-                </p>
+                <ul className="list-disc pl-5 space-y-2">
+                    <li>Ready to Use: No waiting. Start your ads immediately.</li>
+                    <li>Fully Verified: We handle the paperwork so you don't have to.</li>
+                    <li>Stay Safe: Our accounts are built to last and follow the rules.</li>
+                    <li>Expert Support: We help you every step of the way.</li>
+                </ul>
               </div>
             </div>
 
@@ -394,7 +443,7 @@ const AboutPage = () => {
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {offerings.map((offer, index) => (
               <div key={index} className="rounded-xl border border-slate-100 bg-slate-50 p-6">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#1877F2] text-white">
@@ -493,7 +542,7 @@ const AboutPage = () => {
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {chooseReasons.map((reason, index) => (
               <div key={index} className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-6">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-[#1877F2]">
@@ -591,20 +640,26 @@ const AboutPage = () => {
           <div className="mx-auto max-w-3xl">
             <div className="grid gap-4 sm:grid-cols-2">
               {faqs.map((faq, index) => (
-                <button
+                <div
                   key={index}
-                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-4 text-left transition-all hover:border-blue-200 hover:shadow-sm"
+                  className="rounded-xl border border-slate-200 bg-white p-4"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex gap-3">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#1877F2]">
                       <MessageCircle className="h-4 w-4" />
                     </div>
-                    <span className="text-sm font-medium text-[#0D1625]">
-                      {faq.question}
-                    </span>
+                    <div>
+                        <span className="text-sm font-bold text-[#0D1625] block mb-1">
+                          {faq.question}
+                        </span>
+                        {faq.answer && (
+                            <span className="text-xs text-slate-500 block">
+                              {faq.answer}
+                            </span>
+                        )}
+                    </div>
                   </div>
-                  <ChevronRight className="h-5 w-5 text-slate-300" />
-                </button>
+                </div>
               ))}
             </div>
           </div>

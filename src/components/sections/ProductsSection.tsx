@@ -13,7 +13,7 @@ const ProductsSection = () => {
       {
         id: 1,
         name: 'Buy Verified BM 1 | Verified Facebook Business Manager 1 For Static Ads',
-        image: '/images/card1.jpeg',
+        image: '/image/homePageCard1.webp',
         description: 'Verified Facebook Business Manager 1 For Static Ads',
         price: '49.00',
         oldPrice: '',
@@ -23,7 +23,7 @@ const ProductsSection = () => {
       {
         id: 2,
         name: 'BM Verification Service: Verify Facebook Business Manager',
-        image: '/images/card2.jpeg',
+        image: '/image/homePageCard2.webp',
         description: 'Verify Facebook Business Manager',
         price: '49.00',
         oldPrice: '119.00',
@@ -33,7 +33,7 @@ const ProductsSection = () => {
       {
         id: 3,
         name: 'Buy Verified BM with Verified Ads Account',
-        image: '/images/card3.jpeg',
+        image: '/image/homePageCard3.webp',
         description: 'Buy Verified BM with Verified Ads Account',
         price: '99.00',
         oldPrice: '',
@@ -43,7 +43,7 @@ const ProductsSection = () => {
       {
         id: 4,
         name: 'Buy Verified BM 3 | Verified Facebook Business Manager 3',
-        image: '/images/card5.jpeg',
+        image: '/image/homePageCard4.webp',
         description: 'Verified Facebook Business Manager 3',
         price: '99.00',
         oldPrice: '139.00',
@@ -53,7 +53,7 @@ const ProductsSection = () => {
       {
         id: 5,
         name: 'Buy Verified BM 5 | Verified Facebook Business Manager',
-        image: '/images/card6.jpeg',
+        image: '/image/homePageCard5.webp',
         description: 'Verified Facebook Business Manager',
         price: '299.00',
         oldPrice: '',
@@ -63,7 +63,7 @@ const ProductsSection = () => {
        {
         id: 6,
         name: 'Buy Verified BM 10 | Real Documents Verified Facebook Business Manager',
-        image: '/images/card7.jpeg',
+        image: '/image/homePageCard6.webp',
         description: 'Real Documents Verified Facebook Business Manager',
         price: '300.00',
         oldPrice: '',
@@ -75,7 +75,7 @@ const ProductsSection = () => {
       {
         id: 7,
         name: 'Buy Whatsapp Business API limit 2000 With FB Verified BM',
-        image: '/images/card8.jpeg',
+        image: '/image/homePageCard7.webp',
         description: 'Buy Whatsapp Business API limit 2000 With FB Verified BM',
         price: '199.00',
         oldPrice: '',
@@ -85,7 +85,7 @@ const ProductsSection = () => {
       {
         id: 8,
         name: 'Buy WhatsApp Business API limit 250 With FB Verified BM',
-        image: '/images/card9.jpeg',
+        image: '/image/homePageCard8.webp',
         description: 'Buy WhatsApp Business API limit 250 With FB Verified BM',
         price: '70.00',
         oldPrice: '80.00',
@@ -95,7 +95,7 @@ const ProductsSection = () => {
       {
         id: 9,
         name: 'Buy WhatsApp Business API Limit 10000 With FB Verified BM - Verified Meta Business Messaging',
-        image: '/images/card1.jpeg',
+        image: '/image/homePageCard9.webp',
         description: 'Verified Meta Business Messaging',
         price: '900.00',
         oldPrice: '',
@@ -107,7 +107,7 @@ const ProductsSection = () => {
        {
         id: 10,
         name: 'Reinstate Facebook Account | Business Use, Personal, or Running ads',
-        image: '/images/card2.jpeg',
+        image: '/image/homePageCard10.svg',
         description: 'Reinstate Facebook Account',
         price: '149.00',
         oldPrice: '',
@@ -117,7 +117,7 @@ const ProductsSection = () => {
       {
         id: 11,
         name: 'Verified TikTok agency ad account buy- Verified & High Limit TikTok Ads account for Agencies',
-        image: '/images/card3.jpeg',
+        image: '/image/homePageCard11.webp',
         description: 'Verified & High Limit TikTok Ads account for Agencies',
         price: '99.00',
         oldPrice: '',
