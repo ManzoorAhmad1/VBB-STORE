@@ -181,7 +181,7 @@ const ProductsSection = () => {
               key={product.id}
               className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-xl hover:border-blue-100"
             >
-              <div className="relative overflow-hidden bg-gray-50 aspect-[4/3]">
+              <div className="relative overflow-hidden bg-gray-50 aspect-square">
                 {product.popular && (
                   <div className="absolute right-0 top-6 z-10 translate-x-1/3 rotate-45 transform bg-blue-600 px-8 py-1 text-xs font-bold text-white shadow-md">
                     Premium
@@ -200,7 +200,7 @@ const ProductsSection = () => {
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               

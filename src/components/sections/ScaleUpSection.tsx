@@ -22,7 +22,7 @@ const ScaleUpSection = () => {
                 <Image
                   src="/images/herosection image.jpeg"
                   alt="Verified BM Buy"
-                  className="rounded-[22px] w-full object-cover"
+                  className="rounded-[22px] w-full object-contain"
                   width={600}
                   height={600}
                 /> 

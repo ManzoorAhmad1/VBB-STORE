@@ -6,7 +6,7 @@ import FeaturesSection from './FeaturesSection'
 
 const HeroSection = () => {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background py-16 md:py-24 lg:py-28">
+        <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background">
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-primary/[0.06] blur-[100px]"></div>
                 <div className="absolute -right-32 bottom-0 h-[400px] w-[400px] rounded-full bg-primary/[0.04] blur-[100px]"></div>
@@ -21,7 +21,7 @@ const HeroSection = () => {
                                 <Image
                                     src="/images/herosection image.jpeg"
                                     alt="VBB - Verified BM Buy"
-                                    className="h-52 w-52 rounded-[22px] object-cover sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-80 lg:w-80 animate-hero-scale-in"
+                                    className="h-52 w-52 rounded-[22px] object-contain sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-80 lg:w-80 animate-hero-scale-in"
                                     priority
                                     width={320}
                                     height={320}
@@ -42,8 +42,9 @@ const HeroSection = () => {
                         </div>
 
                         <h1 className="mb-5 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl md:text-[2.75rem] lg:text-[2.85rem] xl:text-[3.25rem] animate-hero-fade-right" style={{ animationDelay: '0.25s' }}>
-                            Buy <span className="text-vbb-primary">Verified BM</span> – Facebook Business Manager <br />
-                            <span className="mt-3 block text-green-500">& WhatsApp API Accounts</span>
+                            Buy <span className="text-vbb-primary">Verified BM</span> – Facebook
+                            <span className="block mt-6">Business Manager</span>
+                            <span className="mt-6 block text-green-500">& WhatsApp API Accounts</span>
                         </h1>
 
                         <p className="mb-4 text-sm text-muted-foreground md:text-base leading-relaxed text-justify animate-hero-fade-right" style={{ animationDelay: '0.35s' }}>

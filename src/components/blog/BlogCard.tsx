@@ -38,7 +38,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
     <Link href={`/blog/${post.slug}`}>
       <article className="group h-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-lg">
         {/* Featured Image */}
-        <div className="relative aspect-[16/10] bg-gray-100 overflow-hidden">
+        <div className="relative aspect-video bg-white overflow-hidden">
           {post.image ? (
             <Image
               src={post.image}
@@ -53,6 +53,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
                 </span>
             </div>
           )}
+          <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300" />
         </div>
 
         {/* Content */}

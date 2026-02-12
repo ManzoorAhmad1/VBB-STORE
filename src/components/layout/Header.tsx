@@ -1,12 +1,14 @@
 "use client"
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { ShoppingCart, User, Menu } from 'lucide-react'
+import { ShoppingCart, User, Menu, X } from 'lucide-react'
 
 const Header = () => {
   const pathname = usePathname()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navLinks = [
     { name: 'HOME', href: '/' },
@@ -67,11 +69,46 @@ const Header = () => {
               </button>
             </a>
             
-            <button className="inline-flex items-center justify-center text-slate-600 lg:hidden" aria-label="Menu">
-              <Menu className="h-6 w-6" />
+            <button 
+              className="inline-flex items-center justify-center text-slate-600 lg:hidden" 
+              aria-label="Menu"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-[72px] left-0 w-full border-t border-gray-100 bg-white shadow-xl lg:hidden">
+            <nav className="container flex flex-col p-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`border-b border-gray-50 py-4 text-sm font-bold uppercase tracking-wide transition-colors hover:text-[#1877F2] ${
+                    pathname === link.href ? 'text-[#1877F2]' : 'text-slate-600'
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <div className="pt-4">
+                  <a href="https://wa.me/8801302669333" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
+                    <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#337AB7] px-6 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#286090]">
+                        Get Started
+                    </button>
+                  </a>
+              </div>
+            </nav>
+          </div>
+        )}
       </header>
     </>
   )
