@@ -14,19 +14,17 @@ const Footer = () => {
             {/* 1. Logo Column */}
             <div className="h-full rounded-3xl border border-slate-200 p-6 text-left md:p-8 lg:h-auto lg:border-0 lg:p-0">
                 <div className="mb-5 flex items-center gap-3">
-                    <div className="relative h-11 w-11 overflow-hidden rounded-full ring-2 ring-slate-100">
-                        <Image 
-                            src="/images/Logo/ALL PNG-01.png" 
-                            alt="VBB Store" 
-                            className="object-cover"
-                            fill
-                            sizes="44px"
-                            onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                        />
+                       <Image 
+                                   src="/images/logo.jpg" 
+                                   alt="Verified BM Buy" 
+                                   className="h-14 w-auto object-contain transition-transform group-hover:scale-105" 
+                                   priority
+                                   width={358} 
+                                   height={400}
+                                 />
                          <div className="absolute inset-0 -z-10 flex items-center justify-center bg-blue-50 text-[10px] font-bold text-blue-600">
                             VBB
                          </div>
-                    </div>
                     <span className="text-lg font-extrabold text-[#0D1625]">VBB STORE</span>
                 </div>
                 <p className="text-sm leading-relaxed text-slate-500">
