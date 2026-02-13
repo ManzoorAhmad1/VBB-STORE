@@ -5,10 +5,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { ShoppingCart, User, Menu, X } from 'lucide-react'
+import AuthModal from '../auth/AuthModal'
 
 const Header = () => {
   const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false)
 
   const navLinks = [
     { name: 'HOME', href: '/' },
@@ -52,7 +54,11 @@ const Header = () => {
         
           <div className="flex items-center gap-5">
              {/* Profile Icon */}
-             <button className="inline-flex items-center justify-center text-black/70 transition-colors hover:text-[#1877F2]" aria-label="User profile">
+             <button 
+               className="inline-flex items-center justify-center text-black/70 transition-colors hover:text-[#1877F2]" 
+               aria-label="User profile"
+               onClick={() => setIsAuthModalOpen(true)}
+             >
               <User className="h-5 w-5" />
             </button>
 
@@ -109,6 +115,8 @@ const Header = () => {
             </nav>
           </div>
         )}
+        
+        <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} />
       </header>
     </>
   )
